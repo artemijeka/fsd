@@ -1,0 +1,38 @@
+.marks {
+  display: inline-block;
+  width: 50%;
+  float: right;
+  height: auto;
+}
+
+.mark {
+  &-h1 {
+
+  }
+
+  &-h2 {
+
+  }
+
+  &-h3 {
+
+  }
+
+  &-item {
+    &__name {
+      display: inline-block;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      color: rgba(31, 32, 65, 0.25);
+    }
+
+    &__example {
+      display: inline-block;
+      width: 90%;
+
+    }
+  }
+}
