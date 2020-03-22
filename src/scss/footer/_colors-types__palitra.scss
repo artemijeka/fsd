@@ -1,23 +1,59 @@
 .palitra {
+  width: 50%;
+
   &-item {
-    &__box {
-      width: 70px;
-      height: 70px;
-      display: inline-block;
+    margin-top: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 70px;
+
+    .color {
+      &_dark-shade {
+        &_100 {
+          background: #1F2041;
+        }
+        &_75 {
+          background: rgba(31, 32, 65, 0.75);
+        }
+        &_50 {
+          background: rgba(31, 32, 65, 0.5);
+        }
+        &_25 {
+          background: rgba(31, 32, 65, 0.25);
+        }
+        &_5 {
+          background: rgba(31, 32, 65, 0.05);
+        }
+      }
     }
 
-    &__text {
+    &__box {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      border-radius: 6px;
+    }
+
+    &__text,
+    &__subtext {
       font-family: Quicksand;
       font-style: normal;
       font-weight: bold;
       font-size: 19px;
       line-height: 29px;
-      display: flex;
+      width: 60%;
+      height: 50%;
+      display: inline-flex;
       align-items: center;
+    }
 
-      /* Dark 100% */
+    &__text {
 
-      color: #1F2041;
     }
   }
 }
