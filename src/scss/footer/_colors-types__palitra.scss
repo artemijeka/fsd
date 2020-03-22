@@ -1,0 +1,23 @@
+.palitra {
+  &-item {
+    &__box {
+      width: 70px;
+      height: 70px;
+      display: inline-block;
+    }
+
+    &__text {
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 29px;
+      display: flex;
+      align-items: center;
+
+      /* Dark 100% */
+
+      color: #1F2041;
+    }
+  }
+}
