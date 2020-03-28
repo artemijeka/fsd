@@ -1,0 +1,49 @@
+.text-field {
+  font-family: Montserrat;
+  &__wrap {
+    display: inline-block;
+    width: 320px;
+    height: 44px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__title {
+    margin-bottom: 8px;
+    width: 50%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+  &__descr {
+    margin-bottom: 8px;
+    width: 50%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  &__input {
+    padding-left: 15px;
+    width: 100%;
+    max-width: 320px;
+    height: 44px;
+    background: #FFFFFF;    
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.25);
+    &_default {
+      border: 1px solid rgba(31, 32, 65, 0.25);
+    }
+  }
+
+}

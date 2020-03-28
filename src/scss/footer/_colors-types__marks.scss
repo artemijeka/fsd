@@ -1,37 +1,86 @@
 .marks {
   display: inline-block;
-  width: 50%;
+  width: 47%;
   float: right;
   height: auto;
 }
 
 .mark {
-  &-h1 {
 
+  &-h1 {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
   }
 
   &-h2 {
-
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041;
   }
 
   &-h3 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
 
+  &-body {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
   }
 
   &-item {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+
     &__name {
       display: inline-block;
       font-family: Montserrat;
       font-style: normal;
       font-weight: normal;
-      font-size: 24px;
-      line-height: 29px;
       color: rgba(31, 32, 65, 0.25);
+
+      &_h1 {
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      &_h2 {
+        font-size: 19px;
+        line-height: 23px;
+      }
+
+      &_h3 {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      &_body {
+        font-size: 14px;
+        line-height: 24px;
+      }
     }
 
     &__example {
       display: inline-block;
-      width: 90%;
+      width: 80%;
 
     }
   }
