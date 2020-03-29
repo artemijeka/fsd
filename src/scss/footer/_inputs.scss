@@ -1,9 +1,15 @@
+.inputs-wrapper {
+  margin-top: 35px;
+    margin-left: 140px;
+}
+
 .text-field {
   font-family: Montserrat;
-  &__wrap {
+  &__wrap {  
+    margin-top: 20px;
     display: inline-block;
     width: 320px;
-    height: 44px;
+    height: 64px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -13,7 +19,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 1em;
     text-transform: uppercase;
     color: #1F2041;
   }
@@ -23,12 +29,13 @@
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 1em;
     text-align: right;
     text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
   }
-  &__input {
+  &__input,
+  &__select {
     padding-left: 15px;
     width: 100%;
     max-width: 320px;
@@ -40,8 +47,20 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    color: rgba(31, 32, 65, 0.25);
+  }
+  &__input {
     &_default {
+      color: rgba(31, 32, 65, 0.25);
+      border: 1px solid rgba(31, 32, 65, 0.25);
+    }
+    &_hover {
+      color: rgba(31, 32, 65, 0.75);
+      border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+  }
+  &__select {
+    &_default {
+      color: rgba(31, 32, 65, 0.75);
       border: 1px solid rgba(31, 32, 65, 0.25);
     }
   }

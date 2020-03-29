@@ -1,7 +1,7 @@
-@import "colors-types";
-@import "colors-types__palitra";
-@import "colors-types__marks";
+@import "_colors-types.scss";
+@import "_colors-types__palitra.scss";
+@import "_colors-types__marks.scss";
 
-@import "navigate";
+@import "_navigate.scss";
 
 

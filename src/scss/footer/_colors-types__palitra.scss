@@ -1,6 +1,7 @@
 .palitra {
-  display: inline-block;
   width: 50%;
+  display: inline-flex;
+  flex-direction: column;
 
   &-item {
     margin-top: 20px;
