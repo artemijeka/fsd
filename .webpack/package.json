@@ -1,0 +1,33 @@
+{
+  "name": "fsd_frontend_education_program",
+  "version": "1.0.0",
+  "description": "Webpack. Полный курс 2020 - Владилен Минин https://youtu.be/eSaF8NXeNsA?t=559",
+  "main": "./src/index.pug",
+  "dependencies": {
+    "libs": "^0.1.2",
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1",
+    "parcel": "^2.0.0-alpha.3.2",
+    "sass": "^1.26.3",
+    "window": "^4.2.7"
+  },
+  "devDependencies": {
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artemijeka/frontend_education_program.git"
+  },
+  "author": "Artem Kuznecov <web@master-artem.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artemijeka/frontend_education_program/issues"
+  },
+  "homepage": "https://github.com/artemijeka/frontend_education_program#readme"
+}

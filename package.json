@@ -1,18 +1,18 @@
 {
-  "name": "frontend_education_program",
+  "name": "fsd_frontend_education_program",
   "version": "1.0.0",
   "description": "Задачи по верстке от FSD. https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/",
-  "main": "./src/index.html",
+  "main": "./src/index.pug",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./src/index.pug --no-source-maps",
-    "build": "parcel build ./src/index.pug --no-source-maps"
+    "build": "parcel build ./src/index.pug"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/artemijeka/frontend_education_program.git"
   },
-  "author": "Artem Kuznecov",
+  "author": "Artem Kuznecov <web@master-artem.ru>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/artemijeka/frontend_education_program/issues"
