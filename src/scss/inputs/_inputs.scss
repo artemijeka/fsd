@@ -1,29 +1,16 @@
-.inputs-wrapper {
-  margin-top: 35px;
-  margin-left: 140px;
-}
-
 .input,
 .select {
-  
+  &__wrap {
+    margin-top: 20px;
+    width: 320px;
+    height: 64px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-
-
-.text-field {
-  font-family: Montserrat;
-  padding-left: 15px;
-  width: 100%;
-  max-width: 320px;
-  height: 44px;
-  background: #ffffff;
-  box-sizing: border-box;
-  border-radius: 4px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  
+.text-field {   
+  font-family: Montserrat;    
   &__title {
     margin-bottom: 8px;
     width: 50%;
@@ -32,7 +19,7 @@
     font-size: 12px;
     line-height: 1em;
     text-transform: uppercase;
-    color: #1f2041;
+    color: #1F2041;
   }
   &__descr {
     margin-bottom: 8px;
@@ -45,38 +32,43 @@
     text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
   }
-  &__wrap {
-    margin-top: 20px;
-    display: inline-block;
-    width: 320px;
-    height: 64px;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  
   &__input {
+    padding-left: 15px;
+    width: 100%;
+    max-width: 320px;
+    height: 44px;
+    background: #FFFFFF;    
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
     &_default {
-      color: rgba(31, 32, 65, 0.75);
-      &::placeholder,  /* Chrome, Firefox, Opera, Safari 10.1+ */
-      &:-ms-input-placeholder, /* Internet Explorer 10-11 */
-      &::-ms-input-placeholder { /* Microsoft Edge */
-        color: rgba(31, 32, 65, 0.25);
-        border: 1px solid rgba(31, 32, 65, 0.25);
+      color: rgba(31, 32, 65, 0.25);
+      border: 1px solid rgba(31, 32, 65, 0.25);
     }
-    &_active,
-    &:hover,
-    &:focus,
-    &:active {
+    &_active {
       color: rgba(31, 32, 65, 0.75);
       border: 1px solid rgba(31, 32, 65, 0.5);
     }
   }
   &__select {
+    padding-left: 15px;
+    width: 100%;
+    max-width: 320px;
+    height: 44px;
+    background: #FFFFFF;    
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
     &_default {
       color: rgba(31, 32, 65, 0.75);
       border: 1px solid rgba(31, 32, 65, 0.25);
-    }
-    span.current {
-      line-height: 3em;
     }
   }
 }
