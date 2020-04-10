@@ -6,43 +6,42 @@ head
   style.
     @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap&subset=cyrillic');
-  link(rel='stylesheet' href='scss/header/index.scss')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css')
+  link(rel='stylesheet' href='/css/header.min.css')
   title FSD frontend education program
 .container
   article.interface
     i.logo.interface__logo
     .interface__wrap
       .input__wrap
-        span.text-field__title text field
-        span.text-field__descr default
-        input.text-field__input.text-field__input_default(type='text' placeholder='Email')
+        span.input__title text field
+        span.input__descr default
+        input.input.input__text-field(type='text' placeholder='Email')
       .input__wrap
-        span.text-field__title text field
-        span.text-field__descr hover / focus
-        input.text-field__input.text-field__input_active(type='text' placeholder='This is pretty awesome')
+        span.input__title text field
+        span.input__descr hover / focus / active
+        input.input.input__text-field.input__text-field_active(type='text' placeholder='This is pretty awesome')
       .select__wrap
-        span.text-field__title dropdown
-        span.text-field__descr default
-        select.text-field__select.text-field__select_default
+        span.select__title dropdown
+        span.select__descr default
+        select.input.input__dropdown
           option(value='1') Сколько гостей
           option(value='one') one
           option(value='two') two
           option(value='three') three
       .input__wrap
-        span.text-field__title masked text field
-        span.text-field__descr default
-        input.text-field__input.text-field__input_default(type='text' placeholder='ДД.ММ.ГГГГ')
+        span.input__title masked text field
+        span.input__descr default
+        input.input.input__masked(type='text' placeholder='ДД.ММ.ГГГГ')
 nav.navigate
   ul
     li
-      a(href='index.pug') 1
+      a(href='index.html') 1
     li
-      a(href='page2.pug') 2
+      a(href='page2.html') 2
 
-link(rel='stylesheet' href='./scss/footer/index.scss')
-link(rel='stylesheet' href='./scss/inputs/index.scss')
+link(rel='stylesheet' href='/css/footer.min.css')
 
 script(src='https://code.jquery.com/jquery-3.4.1.min.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js')
-script(src='./js/footer.js')
+script(src='/js/footer.min.js')
