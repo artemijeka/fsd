@@ -5,6 +5,12 @@
 
 .input,
 .select {
+  
+}
+
+
+
+.text-field {
   font-family: Montserrat;
   padding-left: 15px;
   width: 100%;
@@ -17,14 +23,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  &__wrap {
-    margin-top: 20px;
-    display: inline-block;
-    width: 320px;
-    height: 64px;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  
   &__title {
     margin-bottom: 8px;
     width: 50%;
@@ -46,12 +45,14 @@
     text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
   }
-}
-
-.text-field {
-  
-  
-  
+  &__wrap {
+    margin-top: 20px;
+    display: inline-block;
+    width: 320px;
+    height: 64px;
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__input {
     &_default {
       color: rgba(31, 32, 65, 0.75);
