@@ -1,11 +1,23 @@
 .inputs-wrapper {
   margin-top: 35px;
-    margin-left: 140px;
+  margin-left: 140px;
 }
 
-.text-field {
+.input,
+.select {
   font-family: Montserrat;
-  &__wrap {  
+  padding-left: 15px;
+  width: 100%;
+  max-width: 320px;
+  height: 44px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  &__wrap {
     margin-top: 20px;
     display: inline-block;
     width: 320px;
@@ -21,7 +33,7 @@
     font-size: 12px;
     line-height: 1em;
     text-transform: uppercase;
-    color: #1F2041;
+    color: #1f2041;
   }
   &__descr {
     margin-bottom: 8px;
@@ -34,26 +46,25 @@
     text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
   }
-  &__input,
-  &__select {
-    padding-left: 15px;
-    width: 100%;
-    max-width: 320px;
-    height: 44px;
-    background: #FFFFFF;    
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-  }
+}
+
+.text-field {
+  
+  
+  
   &__input {
     &_default {
-      color: rgba(31, 32, 65, 0.25);
-      border: 1px solid rgba(31, 32, 65, 0.25);
+      color: rgba(31, 32, 65, 0.75);
+      &::placeholder,  /* Chrome, Firefox, Opera, Safari 10.1+ */
+      &:-ms-input-placeholder, /* Internet Explorer 10-11 */
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: rgba(31, 32, 65, 0.25);
+        border: 1px solid rgba(31, 32, 65, 0.25);
     }
-    &_hover {
+    &_active,
+    &:hover,
+    &:focus,
+    &:active {
       color: rgba(31, 32, 65, 0.75);
       border: 1px solid rgba(31, 32, 65, 0.5);
     }
@@ -63,6 +74,8 @@
       color: rgba(31, 32, 65, 0.75);
       border: 1px solid rgba(31, 32, 65, 0.25);
     }
+    span.current {
+      line-height: 3em;
+    }
   }
-
 }

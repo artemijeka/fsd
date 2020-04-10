@@ -5,8 +5,8 @@
   "main": "./src/index.pug",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/index.pug --no-source-maps",
-    "build": "parcel build ./src/index.pug"
+    "dev": "parcel ./src/page2.pug --no-source-maps",
+    "build": "parcel build ./src/page2.pug"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/artemijeka/frontend_education_program#readme",
   "devDependencies": {
+    "niceselect": "^1.0.0",
     "normalize": "^0.3.1",
     "parcel": "^2.0.0-alpha.3.2",
     "pug": "^2.0.4",
