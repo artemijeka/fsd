@@ -6,7 +6,7 @@ head
   style.
     @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap&subset=cyrillic');
-  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css')
+  //- link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css')
   link(rel='stylesheet' href='/css/header.min.css')
   title FSD frontend education program
 .container
@@ -21,9 +21,9 @@ head
         span.input__title text field
         span.input__descr hover / focus / active
         input.input.input__text-field.input__text-field_active(type='text' placeholder='This is pretty awesome')
-      .select__wrap
-        span.select__title dropdown
-        span.select__descr default
+      .input__wrap
+        span.input__title dropdown
+        span.input__descr default
         select.input.input__dropdown
           option(value='1') Сколько гостей
           option(value='one') one
@@ -33,6 +33,13 @@ head
         span.input__title masked text field
         span.input__descr default
         input.input.input__masked(type='text' placeholder='ДД.ММ.ГГГГ')
+      .input__wrap.input__wrap-half
+        span.input__title.input__title-100 date dropdown
+        select.input.input__date-dropdown
+          option(value='test') ДД.ММ.ГГГГ
+          option(value='one') one
+          option(value='two') two
+          option(value='three') three
 nav.navigate
   ul
     li
@@ -42,6 +49,5 @@ nav.navigate
 
 link(rel='stylesheet' href='/css/footer.min.css')
 
-script(src='https://code.jquery.com/jquery-3.4.1.min.js')
-script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js')
+script(src='/js/vendor/footer.min.js')
 script(src='/js/footer.min.js')
