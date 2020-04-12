@@ -1,8 +1,16 @@
 @import 'libs/_nice-select.scss';
 @import 'libs/_jquery-ui.scss';
 
+
+@import '_vars.scss';
+
+
+@import 'pages/_palitra-text.scss';
+@import 'pages/_interface.scss';
+
+
 @import '_general.scss';
-@import '_navigate.scss';
+
 
 @import '_palitra.scss';
 @import '_text.scss';

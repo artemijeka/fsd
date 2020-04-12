@@ -13,7 +13,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    color: #1F2041;
+    color: $color-text;
   }
 
   &-h2 {
@@ -22,7 +22,7 @@
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
-    color: #1F2041;
+    color: $color-text;
   }
 
   &-h3 {
@@ -32,7 +32,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: #1F2041;
+    color: $color-text;
   }
 
   &-body {
@@ -41,7 +41,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
+    color: rgba($color-text, 0.75);
   }
 
   &-item {
@@ -55,7 +55,7 @@
       font-family: Montserrat;
       font-style: normal;
       font-weight: normal;
-      color: rgba(31, 32, 65, 0.25);
+      color: rgba($color-text, 0.25);
 
       &_h1 {
         font-size: 24px;

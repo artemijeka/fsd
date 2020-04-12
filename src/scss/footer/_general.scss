@@ -1,5 +1,12 @@
 body {
   font-family: 'Quicksand', sans-serif;
+  margin-bottom: 20em;
+}
+
+button,
+input {
+  outline: transparent;
+  outline: none;
 }
 
 .container {
@@ -9,32 +16,24 @@ body {
   margin: auto;
 }
 
-.colors-types {
-  &__logo {
-    margin: 30px;
+.navigate  {
+  ul {
+    margin: 2em auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+    li {
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        &:hover {
+          font-weight: 900;
+          text-decoration: underline;
+        }
+      }
+    }
   }
-
-  &__container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-  }
-}
-
-.interface {
-
-  &__logo {
-    margin: 30px;
-  }
-
-  &__wrap {
-      margin-top: 35px;
-      margin-left: 140px;
-  }
-
-  &__input-wrap_05 {
-    margin-right: 14px;
-  }
-
-
 }

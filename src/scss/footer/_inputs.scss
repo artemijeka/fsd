@@ -1,7 +1,6 @@
 .input {
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  outline: none;
-  position: relative; 
+  border: 1px solid rgba($color-text, 0.25);
+  position: relative;
   transition: 200ms;
   font-family: Montserrat;
   padding-left: 15px;
@@ -33,17 +32,17 @@
   }
 
   &__title {
-    margin-bottom: 8px;    
+    margin-bottom: 8px;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 1em;
     text-transform: uppercase;
-    color: #1f2041;
-    &_50 {
+    color: $color-text;
+    &_05 {
       width: 50%;
     }
-    &_100 {
+    &_1 {
       width: 100%;
     }
   }
@@ -57,91 +56,175 @@
     line-height: 1em;
     text-align: right;
     text-transform: uppercase;
-    color: rgba(31, 32, 65, 0.5);
+    color: rgba($color-text, 0.5);
   }
 
-  &__text-field { 
+  &_text-field {
     &::placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: rgba($color-text, 0.25);
     }
     &_active,
     &:hover,
     &:focus,
     &:active {
-      color: rgba(31, 32, 65, 0.75);
-      border: 1px solid rgba(31, 32, 65, 0.5);
+      color: rgba($color-text, 0.75);
+      border: 1px solid rgba($color-text, 0.5);
       &::placeholder {
-        color: rgba(31, 32, 65, 0.75);
+        color: rgba($color-text, 0.75);
       }
     }
   }
 
-  &__dropdown {
-    color: rgba(31, 32, 65, 0.75);
+  &_dropdown,
+  &_dropdown-room {
+    color: rgba($color-text, 0.75);
     position: relative;
-    cursor: pointer!important;
+    cursor: pointer !important;
 
     &::placeholder {
-      color: rgba(31, 32, 65, 0.75);
+      color: rgba($color-text, 0.75);
     }
     &:hover,
     &:focus,
     &:active {
-      border: 1px solid rgba(31, 32, 65, 0.5);
+      border: 1px solid rgba($color-text, 0.5);
       &::placeholder {
-        color: rgba(31, 32, 65, 0.75);
+        color: rgba($color-text, 0.75);
       }
     }
-
     ///nice-select ico customize///
     .current {
       line-height: 3em;
     }
     .list {
       min-width: 320px;
-      box-shadow: 0 0 0 1px rgba(31, 32, 65, 0.5);
+      box-shadow: 0 0 0 1px rgba($color-text, 0.5);
     }
     ///nice-select ico customize///
-
-    &-ico {
-      border-bottom: 2px solid #999;
-      border-right: 2px solid #999;
-      display: block;
-      height: 5px;
-      margin-top: -4px;
-      pointer-events: none;
-      position: absolute;
-      right: 12px;
-      bottom: 18px;
-      transform-origin: 66% 66%;
-      transform: rotate(45deg);
-      transition: all .15s ease-in-out;
-      width: 5px;
+  }
+  &_dropdown-room {
+    &.expanded {
+      border: 1px solid rgba($color-text, 0.5);
+      border-radius: 4px 4px 0 0;
+      border-bottom: 0;
+      ~ .input__dropdown-list {
+        // display: block;
+        opacity: 1;
+        min-height: 119px;
+        height: auto;
+      }
     }
   }
 
-  
-
-  &__subscription {
-    &::placeholder {
-      color: rgba(31, 32, 65, 0.25);
-    }
-    &-btn {
+  &__dropdown-ico {
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    display: block;
+    height: 5px;
+    margin-top: -4px;
+    pointer-events: none;
     position: absolute;
-    bottom: 0;
-    height: 44px;
-    background: transparent;
-    right: 0;
-    width: 44px;
-    border: none;
-    cursor: pointer;
+    right: 12px;
+    bottom: 18px;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 5px;
+  }
+  &__dropdown {
+    &-list {
+      // display: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 0;
+      height: 0;
+      position: relative;
+      z-index: 999;
+      border: 1px solid rgba($color-text, 0.5);
+      box-sizing: border-box;
+      list-style: none;
+      border-radius: 0 0 4px 4px;
+      opacity: 0;
+      transition: .3s;
+      overflow: hidden;
     }
-    &-ico {
-          background: transparent url(../img/icons/arrow.svg) center/66% no-repeat;
+    &-item {
+      padding: 0;
+      width: 100%;
+      height: 33%;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      &-title {
+        padding-left: 15px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $color-text;
+      }
+      &-number {
+        font-weight: bold;
+        font-size: 12px;
+        max-width: 30px;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-text;
+        background-color: transparent;
+      }
+      &-btns {
+        max-width: 92px;
+        width: 100%;
+        margin-right: 7px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-btn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba($color-text, 0.5);
+        color: rgba(31, 32, 65, 0.5);
+        background-color: transparent;
+        box-sizing: border-box;
+        border-radius: 50%;
+        cursor: pointer;
+        &.less {
+          &.disable {
+            border: 1px solid rgba($color-text, 0.25);
+            color: rgba($color-text, 0.25);
+          }
+        }
+        &.more {
+          &.disable {
+
+          }
+        }
+      }
+    }
+  }
+  &__subscription-ico {
+    background: transparent url(../img/icons/arrow.svg) center/66% no-repeat;
     display: inline-block;
     width: 100%;
     height: 100%;
+  }
+
+  &_subscription {
+    &::placeholder {
+      color: rgba($color-text, 0.25);
+    }
+    &-btn {
+      position: absolute;
+      bottom: 0;
+      height: 44px;
+      background: transparent;
+      right: 0;
+      width: 44px;
+      border: none;
+      cursor: pointer;
     }
   }
-  
 }

@@ -1,0 +1,18 @@
+
+.interface {
+
+  &__logo {
+    margin: 30px;
+  }
+
+  &__wrap {
+    margin-top: 35px;
+    display: flex;
+    margin-left: 140px;
+    flex-direction: column;
+    max-height: 1000px;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
+}
