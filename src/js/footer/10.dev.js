@@ -15,4 +15,10 @@ $(function() {
     console.log( maskedInput );
   });
 
+
+  $('.input__dropdown_date').datepicker({
+    dateFormat: "dd.mm.yy"
+  });
+
+
 });

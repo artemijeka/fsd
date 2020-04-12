@@ -25,21 +25,26 @@ head
         span.input__title dropdown
         span.input__descr default
         select.input.input__dropdown
-          option(value='1') Сколько гостей
-          option(value='one') one
-          option(value='two') two
-          option(value='three') three
+          option(value='0') Сколько гостей
+          option(value='1') one
+          option(value='2') two
+          option(value='3') three
       .input__wrap
         span.input__title masked text field
         span.input__descr default
         input.input.input__masked(type='text' placeholder='ДД.ММ.ГГГГ')
-      .input__wrap.input__wrap-half
-        span.input__title.input__title-100 date dropdown
-        select.input.input__date-dropdown
-          option(value='test') ДД.ММ.ГГГГ
-          option(value='one') one
-          option(value='two') two
-          option(value='three') three
+      .input__wrap.input__wrap_05.interface__input-wrap_05
+        span.input__title.input__title_100 date dropdown
+        input.input.input__dropdown(placeholder='ДД.ММ.ГГГГ')
+        i.input__dropdown-ico
+      .input__wrap.input__wrap_05.interface__input-wrap_05
+        span.input__title.input__title_100 date dropdown
+        input.input.input__dropdown(placeholder='19.08.2019')
+        i.input__dropdown-ico
+      .input__wrap.input__wrap_075
+        span.input__title.input__title_100 filter date dropdow
+        input.input.input__dropdown(placeholder='19 авг - 23 авг')
+        i.input__dropdown-ico
 nav.navigate
   ul
     li
