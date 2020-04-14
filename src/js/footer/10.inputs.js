@@ -38,8 +38,12 @@ $(function() {
     }  
     if (currentVal > 0) {
       $(this).next().val(--currentVal);
-    } 
-      
+    }
   });
+
+  let dropdownRoom = {
+    $inputDescr: $('[data="openDropdownList"]'),
+    
+  };
 
 });
