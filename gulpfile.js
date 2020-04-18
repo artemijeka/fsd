@@ -249,7 +249,7 @@ gulp.task('js_header', function () {
             presets: ['@babel/env']
         }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(DEV.JS.ROOT));
 });
 
@@ -264,7 +264,7 @@ gulp.task('js_footer', function () {
             presets: ['@babel/env']
         }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(DEV.JS.ROOT));
 });
 
