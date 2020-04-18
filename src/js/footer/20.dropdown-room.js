@@ -1,4 +1,4 @@
-$(function(){
+// $(function(){
 
 
   var dropdownRoom = new Dropdown('#dropdown2');
@@ -7,19 +7,16 @@ $(function(){
   function Dropdown(id) {
     
     //сам dropdown (input)
-    this.$inputDropdown = $(id);
+    this.inputDropdown = document.querySelector(id);
 
     //лист вариантов (ul)
-    this.$inputDropdownList = this.$inputDropdown.next().next();
-
-    //набор кол-ва и названий
-    this.objOfinputsDropdown = this.$inputDropdownList.find('[data=\'numberValue\']');
+    this.arInputsDropdownList = this.inputDropdown.nextSibling.nextSibling.nextSibling.children;
 
     //объект с данными текущего dropdown
     this.objDataDropdown = {};
 
     //метод обновления данных dropdown
-    this.refreshDataDropdown = function(name, val) {
+    this.refreshDataDropdown = (name, val) => {
       this.objDataDropdown[name] = val;
       console.log(this.objDataDropdown);
     };
@@ -27,42 +24,42 @@ $(function(){
     this.init = function() {
 
       //инициализация щелчка на dropdown
-      this.$inputDropdown.on('click', function(e) {
-        $(this).toggleClass('expanded');
-      });
+      this.inputDropdown.onclick = function(event) {
+        event.target.classList.toggle('expanded');
+      }
 
       //инициализация объекта с данными и кликов на + и на -
-      $.each(this.objOfinputsDropdown, (i, v) => {
-        this.objDataDropdown[$(v).data('name')] = $(v).val();
-        if ($(v).val()==0) {
-          $(v).addClass('disable');
+      for (let item of this.arInputsDropdownList) {
+        // console.log( item );
+        let less = item.childNodes[3].childNodes[1];
+        let value = item.childNodes[3].childNodes[3];
+        let more = item.childNodes[3].childNodes[5];
+        if ( Number( value.getAttribute('value') ) === 0 ) {
+          less.classList.add('disable');
         }
-
-        // +
-        $(v).next().on('click', function(e) {
-          let currentVal = $(this).prev().val();
-          $(this).prev().prev().removeClass('disable');
-          $(this).prev().val(++currentVal);
-        });
-        // -
-        $(v).prev().on('click', function(e) {
-          let currentVal = Number( $(this).next().val() );
-          // console.log(currentVal);
+        less.onclick = function() {
+          let currentVal = Number( value.getAttribute('value') );
           if ( currentVal === 1 ) {
-            $(this).addClass('disable');
+            less.classList.add('disable');
           }
           if ( currentVal > 0 ) {
-            $(this).next().val(--currentVal);
+            value.setAttribute('value', --currentVal);
           }
-        });
-      });
-
-      console.log(this.objDataDropdown);
+          // this.refreshDataDropdown( value.getAttribute('data-name'), currentVal );
+          console.log(currentVal);
+        }
+        more.onclick = function() {
+          let currentVal = Number( value.getAttribute('value') );
+          less.classList.remove('disable');
+          value.setAttribute('value', ++currentVal);
+          console.log(currentVal);
+        }
+        
+      }
 
     };
-
     this.init();
     
   }
 
-});
+// });
