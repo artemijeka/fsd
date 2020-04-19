@@ -1,0 +1,119 @@
+.checkbox-list {
+  position: relative;
+  width: 266px;
+  &[data-expanded] {
+    .checkbox-list__wrap {
+      height: auto;
+      overflow: auto;
+    }
+    .checkbox-list__dropdown-ico {
+      transform: rotate(45deg) scale(-1);
+      // transform: rotate(225deg);
+      transition: 0.3s;
+    }
+    .checkbox-list__face {
+      margin-bottom: 12px;
+    }
+  }
+  &__face {
+    cursor: pointer;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    &_075 {
+      width: 75%;
+    }
+  }
+  &__dropdown {
+    &-ico {
+      display: inline-block;
+      height: 5px;
+      width: 5px;
+      border-bottom: 2px solid #999;
+      border-right: 2px solid #999;
+      margin-top: -4px;
+      transform: rotate(45deg) scale(1);
+      transition: 0.3s;
+    }
+    &-btn {
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      right: 0;
+      background-color: transparent;
+      border: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      transform: translateY(-25%);
+      cursor: pointer;
+    }
+  }
+
+  &__wrap {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &-checkmark {
+      margin-right: 10px;
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      box-sizing: border-box;
+      border-radius: 4px;
+      transition-duration: 0.3s;
+      &:after {
+        content: "";
+        opacity: 0;
+        display: inline-block;
+        width: 5px;
+        height: 7px;
+        border-right: 2.4px solid;
+        border-bottom: 2.4px solid;
+        border-image-source: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        border-image-slice: 1;
+        transform: rotate(45deg);
+        transition-duration: 0.3s;
+        margin-bottom: 3px;
+      }
+    }
+    &-input {
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+      position: absolute;
+      z-index: 9;
+      transform: translateY(0px);
+      &:checked ~ .checkbox-list__item-checkmark {
+        border-color: #bc9cff;
+        &:after {
+          // content: "";
+          opacity: 1;
+        }
+      }
+    }
+    &-label {
+      // margin-left: 10px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+}
