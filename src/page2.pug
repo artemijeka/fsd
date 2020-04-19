@@ -69,136 +69,18 @@ head
           i.input__subscription-ico
 
           
-      .input__wrap.input__wrap_075.mt20
-        span.input__title.input__title_05 dropdown
-        span.input__descr expanded
-        input#dropdown1.input.input_dropdown-room(data='openDropdownList' data-for-backend="" placeholder='')
-        i.input__dropdown-ico
-        ul.input__dropdown-list
-          li.input__dropdown-item 
-            span.input__dropdown-item-title спальни
-            .input__dropdown-item-btns
-              button.input__dropdown-item-btn.less(data='numberValueLess') &#x2212;
-              input.input__dropdown-item-number(disabled='disabled' data-name="спальни" value='0' data='numberValue')
-              button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
-          li.input__dropdown-item 
-            span.input__dropdown-item-title кровати
-            .input__dropdown-item-btns
-              button.input__dropdown-item-btn.less(data='numberValueLess') &#x2212;
-              input.input__dropdown-item-number(disabled='disabled' data-name="кровати" value='0' data='numberValue')
-              button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
-          li.input__dropdown-item 
-            span.input__dropdown-item-title ванные комнаты
-            .input__dropdown-item-btns
-              button.input__dropdown-item-btn.less(data='numberValueLess') &#x2212;
-              input.input__dropdown-item-number(disabled='disabled' data-name="ванные комнаты" value='0' data='numberValue')
-              button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
+      
+      include pug/components/_dropdown-room.pug
 
 
-      .input__wrap.input__wrap_075.mt20
-        span.input__title.input__title_05 dropdown
-        span.input__descr expanded
-        input#dropdown2.input.input_dropdown-room.expanded(data='openDropdownList' data-for-backend="" placeholder='')
-        i.input__dropdown-ico
-        ul.input__dropdown-list
-          li.input__dropdown-item 
-            span.input__dropdown-item-title спальни
-            .input__dropdown-item-btns
-              button.input__dropdown-item-btn.less(data='numberValueLess') &#x2212;
-              input.input__dropdown-item-number(disabled='disabled' data-name="спальни" value='0' data='numberValue')
-              button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
-          li.input__dropdown-item 
-            span.input__dropdown-item-title кровати
-            .input__dropdown-item-btns
-              button.input__dropdown-item-btn.less(data='numberValueLess') &#x2212;
-              input.input__dropdown-item-number(disabled='disabled' data-name="кровати" value='0' data='numberValue')
-              button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
-          li.input__dropdown-item 
-            span.input__dropdown-item-title ванные комнаты
-            .input__dropdown-item-btns
-              button.input__dropdown-item-btn.less(data='numberValueLess') &#x2212;
-              input.input__dropdown-item-number(disabled='disabled' data-name="ванные комнаты" value='0' data='numberValue')
-              button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
+      include pug/components/_dropdown-room_open.pug
+
+      
+      include pug/components/_checkbox-list.pug
 
 
-      .checkbox-list#checkboxList1.mt200
-        .checkbox-list__face(data-toggle)
-          span.checkbox-list__title.checkbox-list__title_075 expandable checkbox list
-          button.checkbox-list__dropdown-btn
-            i.checkbox-list__dropdown-ico
-        .checkbox-list__wrap
-          .checkbox-list__item
-            label.checkbox-list__item-label Завтрак
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Письменный стол
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Стул для кормления
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Кроватка
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Телевизор
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Шампунь
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Телевизор
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Шампунь
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
+      include pug/components/_checkbox-list_open.pug
 
-
-      .checkbox-list#checkboxList2.mt40(data-expanded)
-        .checkbox-list__face(data-toggle)
-          span.checkbox-list__title.checkbox-list__title_075 expandable checkbox list
-          button.checkbox-list__dropdown-btn
-            i.checkbox-list__dropdown-ico
-        .checkbox-list__wrap
-          .checkbox-list__item
-            label.checkbox-list__item-label Завтрак
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Письменный стол
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Стул для кормления
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Кроватка
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Телевизор
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Шампунь
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Телевизор
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
-          .checkbox-list__item
-            label.checkbox-list__item-label Шампунь
-              input.checkbox-list__item-input(type='checkbox')
-              span.checkbox-list__item-checkmark
 
 nav.navigate
   ul
