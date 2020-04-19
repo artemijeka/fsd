@@ -62,7 +62,8 @@
   }
 
   &__item {
-    height: 30px;
+    margin-top: 10px;
+    // height: 30px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -98,18 +99,20 @@
       height: 20px;
       opacity: 0;
       position: absolute;
-      z-index: 9;
+      left: 0;
       transform: translateY(0px);
-      &:checked ~ .checkbox-list__item-checkmark {
-        border-color: #bc9cff;
-        &:after {
-          // content: "";
-          opacity: 1;
+      &:checked {
+        ~ .checkbox-list__item-checkmark {
+          border-color: #bc9cff;
+          &:after {
+            opacity: 1;
+          }
         }
       }
     }
     &-label {
       // margin-left: 10px;
+      max-width: 15em;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;

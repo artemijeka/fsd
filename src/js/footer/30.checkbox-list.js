@@ -25,10 +25,6 @@ function CheckboxList(id) {
   this.checkboxListToggle.onclick = function() {
     self.checkboxList.toggleAttribute('data-expanded');
   }
-  
-
-
 
   
-
 }
