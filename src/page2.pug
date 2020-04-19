@@ -1,4 +1,6 @@
 doctype html
+
+
 head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
@@ -6,10 +8,12 @@ head
   style.
     @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap&subset=cyrillic');
-  //- link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css')
   link(rel='stylesheet' href='/css/header.min.css')
   title FSD frontend education program
+
+
 .container
+
   article.interface
 
     i.logo.interface__logo
@@ -67,27 +71,28 @@ head
         input.input.input_subscription(type='text' placeholder='Email')
         button.input_subscription-btn(type='submit') 
           i.input__subscription-ico
-
           
       
       include pug/components/_dropdown-room.pug
 
 
-      include pug/components/_dropdown-room_open.pug
+      include pug/components/opened/_dropdown-room.pug
 
       
       include pug/components/_checkbox-list.pug
 
 
-      include pug/components/_checkbox-list_open.pug
+      include pug/components/opened/_checkbox-list.pug
 
 
-nav.navigate
-  ul
-    li
-      a(href='index.html') 1
-    li
-      a(href='page2.html') 2
+      include pug/components/_plus_comfort.pug
+
+
+      include pug/components/_plus_window.pug
+
+
+      include pug/ui-kit/_bottom-navigate.pug
+
 
 link(rel='stylesheet' href='/css/vendor/footer.min.css')
 link(rel='stylesheet' href='/css/footer.min.css')

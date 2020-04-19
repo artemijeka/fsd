@@ -55,11 +55,10 @@ head
           .mark-item__name.mark-item__name_body Body
           p.mark-item__example.mark-body.
             This is the body text which is used for most of the design, like paragraphs, lists, etc.
-nav.navigate
-  ul
-    li
-      a(href='index.html') 1
-    li
-      a(href='page2.html') 2
+
+
+      include pug/ui-kit/_bottom-navigate.pug
+
+
 link(rel='stylesheet' href='./css/footer.min.css')
 script(src='./js/footer.js')

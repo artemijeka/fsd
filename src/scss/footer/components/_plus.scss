@@ -1,0 +1,44 @@
+.plus {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 291px;
+  height: 69px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  &__ico {
+    display: inline-block;
+    width: 48px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 15%;
+    margin-right: 10px;
+    &_smile {
+      background-image: url(../img/icons/emoticon.svg);
+    }
+    &_city {
+      background-image: url(../img/icons/city.svg);
+    }
+  }
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  &__descr,
+  &__title {
+    line-height: 1.4em;
+  }
+  &__title {
+    margin-top: 7px;
+    font-weight: bold;
+  }
+  &__descr {
+    margin: 0;
+    font-weight: normal;
+  }
+}
