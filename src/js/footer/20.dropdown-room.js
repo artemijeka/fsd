@@ -1,7 +1,8 @@
 'use strict';
 
 
-var objDropdownRoom = new Dropdown('#dropdown2');
+var objDropdownRoom1 = new Dropdown('#dropdown1');
+var objDropdownRoom2 = new Dropdown('#dropdown2');
 
 
 function Dropdown(id) {
@@ -9,7 +10,6 @@ function Dropdown(id) {
 
   //сам dropdown (input)
   this.inputDropdown = document.querySelector(id);
-
 
   //лист вариантов (ul)
   this.arInputsDropdownList = this.inputDropdown.nextSibling.nextSibling.nextSibling.children;
@@ -22,14 +22,32 @@ function Dropdown(id) {
   //инициализация щелчка на dropdown
   this.inputDropdown.onclick = function(event) {
     event.target.classList.toggle('expanded');
-  };
+  }
 
 
   //метод обновления данных dropdown
   this.refreshDataDropdown = function(name, val) {
     this.objDataDropdown[name] = val;
-  };
+    this.setInputPlaceholder();
+    this.setInputDataForBackend();
+  }
 
+  this.setInputPlaceholder = function() {
+    let placeholder = '';
+    for (let [key, val] of Object.entries(this.objDataDropdown)) {
+      if (val > 0) {
+        key = key.split(' ')[0];
+        placeholder += ', ' + val + ' ' + key;
+      }
+    }
+    placeholder = placeholder.substring(2);
+    this.inputDropdown.setAttribute('placeholder', placeholder);
+  }
+
+  this.setInputDataForBackend = function() {
+    let dataForBackend = JSON.stringify( this.objDataDropdown );
+    this.inputDropdown.setAttribute(['data-for-backend'], dataForBackend);
+  }
   
   //инициализация объекта с данными и кликов на + и на -
   for (let item of this.arInputsDropdownList) {
@@ -66,6 +84,5 @@ function Dropdown(id) {
     }
   }
 
-  // console.log(this.objDataDropdown);
 
 }

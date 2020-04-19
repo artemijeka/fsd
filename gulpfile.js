@@ -20,12 +20,12 @@ const SRC = {
     FONTS: ['./src/fonts/*'],
     IMAGES: './src/img/**/*.+(ico|svg|png|jpg|gif|webp)',
     SCSS: {
-        HEADER: ['./src/scss/header/*.scss'],
+        HEADER: ['./src/scss/header/**/*.scss'],
         VENDOR: {
             HEADER: ['./src/scss/vendor/header/*.scss'],
             FOOTER: ['./src/scss/vendor/footer/*.scss'],
         },
-        FOOTER: ['./src/scss/footer/*.scss'],
+        FOOTER: ['./src/scss/footer/**/*.scss'],
     },
     JS: {
         HEADER: './src/js/header/*.js',
