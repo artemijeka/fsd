@@ -4,15 +4,15 @@
   &[data-expanded] {
     .checkbox-list__wrap {
       height: auto;
-      overflow: auto;
+      width: 100%;
+      background-color: white;
+      z-index: 9;
+      top: 1.8em;
     }
     .checkbox-list__dropdown-ico {
       transform: rotate(45deg) scale(-1);
       // transform: rotate(225deg);
       transition: 0.3s;
-    }
-    .checkbox-list__face {
-      margin-bottom: 12px;
     }
   }
   &__face {
@@ -58,6 +58,7 @@
   &__wrap {
     height: 0;
     overflow: hidden;
+    position: absolute;
   }
 
   &__item {
@@ -114,6 +115,7 @@
       font-size: 14px;
       line-height: 18px;
       color: rgba(31, 32, 65, 0.5);
+      cursor: pointer;
     }
   }
 }
