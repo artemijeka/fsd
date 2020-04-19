@@ -22,8 +22,8 @@ const SRC = {
     SCSS: {
         HEADER: ['./src/scss/header/**/*.scss'],
         VENDOR: {
-            HEADER: ['./src/scss/vendor/header/*.scss'],
-            FOOTER: ['./src/scss/vendor/footer/*.scss'],
+            HEADER: ['./src/scss/vendor/header/**/*.scss'],
+            FOOTER: ['./src/scss/vendor/footer/**/*.scss'],
         },
         FOOTER: ['./src/scss/footer/**/*.scss'],
     },

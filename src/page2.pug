@@ -16,19 +16,19 @@ head
 
     .interface__wrap
 
-      .input__wrap
+      .input__wrap.mt20
         span.input__title.input__title_05 text field
         span.input__descr default
         input.input.input_text-field(type='text' placeholder='Email')
 
 
-      .input__wrap
+      .input__wrap.mt20
         span.input__title.input__title_05 text field
         span.input__descr hover / focus / active
         input.input.input_text-field.input_text-field_active(type='text' placeholder='This is pretty awesome')
 
 
-      .input__wrap
+      .input__wrap.mt20
         span.input__title.input__title_05 dropdown
         span.input__descr default
         select.input.input_dropdown.jsSelect
@@ -38,38 +38,38 @@ head
           option(value='3') three
 
 
-      .input__wrap
+      .input__wrap.mt20
         span.input__title.input__title_05 masked text field
         span.input__descr default
         input.input.input_text-field.jsMaskedDate(type='text' placeholder='ДД.ММ.ГГГГ')
 
 
-      .input__wrap.input__wrap_05
+      .input__wrap.input__wrap_05.mt20
         span.input__title.input__title_1 date dropdown
         input.input.input_dropdown.jsDateDropdown(placeholder='ДД.ММ.ГГГГ')
         i.input__dropdown-ico
 
 
-      .input__wrap.input__wrap_05
+      .input__wrap.input__wrap_05.mt20
         span.input__title.input__title_1 date dropdown
         input.input.input_dropdown.jsDateDropdown(placeholder='19.08.2019')
         i.input__dropdown-ico
 
 
-      .input__wrap.input__wrap_075
+      .input__wrap.input__wrap_075.mt20
         span.input__title.input__title_1 filter date dropdow
         input.input.input_dropdown(placeholder='19 авг - 23 авг')
         i.input__dropdown-ico
 
 
-      .input__wrap.input__wrap_075
+      .input__wrap.input__wrap_075.mt20
         span.input__title subscription text field
         input.input.input_subscription(type='text' placeholder='Email')
         button.input_subscription-btn(type='submit') 
           i.input__subscription-ico
 
           
-      .input__wrap.input__wrap_075
+      .input__wrap.input__wrap_075.mt20
         span.input__title.input__title_05 dropdown
         span.input__descr expanded
         input#dropdown1.input.input_dropdown-room(data='openDropdownList' data-for-backend="" placeholder='')
@@ -95,7 +95,7 @@ head
               button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
 
 
-      .input__wrap.input__wrap_075
+      .input__wrap.input__wrap_075.mt20
         span.input__title.input__title_05 dropdown
         span.input__descr expanded
         input#dropdown2.input.input_dropdown-room.expanded(data='openDropdownList' data-for-backend="" placeholder='')
@@ -121,9 +121,9 @@ head
               button.input__dropdown-item-btn.more(data='numberValueMore') &#x2b;
 
 
-      .input__wrap.input__wrap_075.mt200
-        span.input__title.input__title_075 expandable checkbox list
-        btn.input__btn-expander V
+      .checkbox-list__wrap.checkbox-list__wrap_075.mt200
+        span.checkbox-list__title.checkbox-list__title_075 expandable checkbox list
+        span.checkbox-list__dropdown-ico
 
 nav.navigate
   ul
@@ -132,6 +132,7 @@ nav.navigate
     li
       a(href='page2.html') 2
 
+link(rel='stylesheet' href='/css/vendor/footer.min.css')
 link(rel='stylesheet' href='/css/footer.min.css')
 
 script(src='/js/vendor/footer.min.js')
