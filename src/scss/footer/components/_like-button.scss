@@ -1,0 +1,87 @@
+.like-button {
+  font-family: $font2;
+  max-width: 266px;
+  &__title {
+    display: inline-block;
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    margin-bottom: 16px;
+  }
+  &__item {
+    position: relative;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 14px;
+    &-checkmark {
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 40px;
+      height: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      &:before {
+        content: "\e803";
+        margin-left: 4px;
+        margin-right: 4px;
+        display: inline-block;
+        font-size: 9px;
+        color: rgba(31, 32, 65, 0.25);
+        transition-duration: 0.3s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: inherit;
+      }
+    }
+    &-radio {
+      opacity: 0;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      cursor: pointer;
+      &:checked {
+        ~ i {
+          background-color: white;
+          background-clip: padding-box;
+          border: 1px solid transparent;
+          &:before {
+            content: "\e804";
+            color: $color-accent;
+          }
+          &:after {
+            background: $gradient-accent-v;
+          }
+        }
+        ~ span {
+          color: $color-accent;
+        }
+      }
+    }
+    &-number {
+      position: absolute;
+      right: 8px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: center;
+      color: $color-grey;
+      transition-duration: 0.3s;
+    }
+  }
+}

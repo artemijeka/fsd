@@ -1,11 +1,9 @@
+@import 'fonts/fontello/_fontello.scss';
 @import '_vars.scss';
 @import '_general.scss';
 
 
-@import 'pages/_palitra-text.scss';
-@import 'pages/_interface.scss';
-
-
+@import 'ui-kit/_index.scss';
 
 
 @import 'components/_palitra.scss';
@@ -14,3 +12,5 @@
 @import 'components/_checkbox.scss';
 @import 'components/_plus.scss';
 @import 'components/_radio-buttons.scss';
+@import 'components/_toggle.scss';
+@import 'components/_like-button.scss';

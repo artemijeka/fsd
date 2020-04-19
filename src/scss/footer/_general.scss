@@ -1,5 +1,4 @@
 body {
-  font-family: 'Quicksand', sans-serif;
   margin-bottom: 20em;
 }
 
@@ -9,49 +8,20 @@ input {
   outline: none;
 }
 
+.icon-logo {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  &:before {
+    font-size: 30px;    
+    display: inline-block;
+    color: $color-grey;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
   height: auto;
   margin: auto;
-}
-
-.mt20 {
-  margin-top: 20px;
-}
-.mt40 {
-  margin-top: 40px;
-}
-.mt170 {
-  margin-top: 170px; 
-}
-.mt200 {
-  margin-top: 200px;
-}
-.mt250 {
-  margin-top: 250px;
-}
-.mt275 {
-  margin-top: 275px;
-}
-.navigate  {
-  ul {
-    margin: 2em auto;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    width: 70px;
-    justify-content: space-between;
-    li {
-      a {
-        text-decoration: none;
-        color: black;
-        font-weight: 500;
-        &:hover {
-          font-weight: 900;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
 }

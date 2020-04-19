@@ -1,0 +1,48 @@
+
+
+@import 'pages/_palitra-text.scss';
+@import 'pages/_interface.scss';
+
+
+.mt20 {
+  margin-top: 20px;
+}
+.mt35 {
+  margin-top: 35px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt170 {
+  margin-top: 170px; 
+}
+.mt200 {
+  margin-top: 200px;
+}
+.mt250 {
+  margin-top: 250px;
+}
+.mt275 {
+  margin-top: 275px;
+}
+.navigate  {
+  ul {
+    margin: 2em auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+    li {
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        &:hover {
+          font-weight: 900;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

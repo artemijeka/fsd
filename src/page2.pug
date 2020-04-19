@@ -16,7 +16,7 @@ head
 
   article.interface
 
-    i.logo.interface__logo
+    i.icon-logo.interface__logo
 
     .interface__wrap
 
@@ -70,7 +70,7 @@ head
         span.input__title subscription text field
         input.input.input_subscription(type='text' placeholder='Email')
         button.input_subscription-btn(type='submit') 
-          i.input__subscription-ico
+          i.input__subscription-ico.icon-arrow
           
       
       include pug/components/_dropdown-room.pug
@@ -95,6 +95,12 @@ head
 
 
       include pug/components/_radio-buttons.pug
+
+
+      include pug/components/_toggle.pug
+
+
+      include pug/components/_like-button.pug
 
 
 

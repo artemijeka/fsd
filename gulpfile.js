@@ -6,7 +6,7 @@
 const SRC = {
     FILES: [
         './src/*.*', 
-        './src/**/fonts/*.*', 
+        './src/**/*.+(eot|svg|ttf|woff|woff2)', 
         './src/**/.htaccess',
         '!./src/**/*.html', 
         '!./src/**/*.pug', 
@@ -17,7 +17,7 @@ const SRC = {
     HTML: [
         './src/**/*.html'
     ],
-    FONTS: ['./src/fonts/*'],
+    // FONTS: ['./src/fonts/*'],
     IMAGES: './src/img/**/*.+(ico|svg|png|jpg|gif|webp)',
     SCSS: {
         HEADER: ['./src/scss/header/**/*.scss'],
@@ -42,7 +42,7 @@ const DEV = {
     ROOT: './dev/',
     FILES: [
         './dev/*.*',
-        './dev/**/fonts/*.*',
+        './dev/fonts/**/*',
         './dev/**/img/**/*.*',
         './dev/**/.htaccess',
         './dev/**/*.html',
@@ -63,7 +63,7 @@ const DEV = {
         FOOTER: ['./dev/js/vendor/footer.min.js', './dev/js/footer.min.js'],
     },
     IMAGES: './dev/img/',
-    FONTS: ['./dev/fonts/'],
+    // FONTS: ['./dev/fonts/'],
 };
 
 
