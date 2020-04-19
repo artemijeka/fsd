@@ -1,15 +1,15 @@
-.checkbox-list {
+.checkbox {
   position: relative;
   width: 266px;
   &[data-expanded] {
-    .checkbox-list__wrap {
+    .checkbox__wrap {
       height: auto;
       width: 100%;
       background-color: white;
       z-index: 9;
       top: 1.8em;
     }
-    .checkbox-list__dropdown-ico {
+    .checkbox__dropdown-ico {
       transform: rotate(45deg) scale(-1);
       // transform: rotate(225deg);
       transition: 0.3s;
@@ -58,7 +58,9 @@
   &__wrap {
     height: 0;
     overflow: hidden;
-    position: absolute;
+    &_absolute {
+      position: absolute;
+    }
   }
 
   &__item {
@@ -102,7 +104,7 @@
       left: 0;
       transform: translateY(0px);
       &:checked {
-        ~ .checkbox-list__item-checkmark {
+        ~ .checkbox__item-checkmark {
           border-color: #bc9cff;
           &:after {
             opacity: 1;
