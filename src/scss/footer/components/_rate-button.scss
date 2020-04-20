@@ -1,0 +1,40 @@
+.rate-button {
+  font-family: $font2;
+  max-width: 266px;
+  &__title {
+    display: inline-block;
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1f2041;
+    margin-bottom: 16px;
+  }
+  &__box {
+    display: inline-flex;
+    flex-direction: row-reverse;//реализация выделения звездочек с низшим рейтингом
+  }
+  &__item {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 8px;
+    &-ico:before {
+      content: '\e807';
+      font-size: 20px;
+      background: $gradient-accent;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &.checked,
+    &:hover ~ button,//реализация выделения звездочек с низшим рейтингом
+    &:hover {
+      i:before {
+        content: '\e808';
+      }
+    }
+  }
+}
