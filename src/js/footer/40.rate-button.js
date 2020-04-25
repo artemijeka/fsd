@@ -7,7 +7,6 @@ let rateButton2 = new RateButton('#rateButton2');
 
 
 
-
 function RateButton(id) {
 
   let self = this;
@@ -16,7 +15,7 @@ function RateButton(id) {
   this.rateButtonBox = document.querySelector(id);
 
 
-  this.valueNumberRate = 0;
+  this.valueNumberRate = this.rateButtonBox.getAttribute('data-rate-value');
 
 
   this.rateButtonItems = this.rateButtonBox.children;
@@ -51,7 +50,7 @@ function RateButton(id) {
   }
 
 
-  this.setRateView = function(setRateNumber) {
+  this.setRateView = function(setRateNumber = this.valueNumberRate) {
     for (let button of self.rateButtonItems) {
       // console.log(setRateNumber);
       // console.log(button);
@@ -61,9 +60,13 @@ function RateButton(id) {
         button.classList.add('checked');
       } else {
         button.classList.remove('checked');
-      }
+      }      
     }
-  }
+  };
+
+
+  //init view of rates
+  this.setRateView();
 
 
 }
