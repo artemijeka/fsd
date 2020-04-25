@@ -16,7 +16,7 @@ function LikeButton( id ) {
   
   
   this.changeValue = function() {
-    console.log(self.likeButton.getAttribute('data-like-checked') == 'true');
+    // console.log(self.likeButton.getAttribute('data-like-checked') == 'true');
     if (self.likeButton.getAttribute('data-like-checked') == 'true') {
       self.likeButton.value--;
       self.likeButton.setAttribute('data-like-checked', 'false');
