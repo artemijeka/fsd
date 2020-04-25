@@ -3,6 +3,7 @@
 
 var objDropdownRoom1 = new Dropdown('#dropdown1');
 var objDropdownRoom2 = new Dropdown('#dropdown2');
+var objDropdownCategory = new Dropdown('#dropdownCategory');
 
 
 function Dropdown(id) {
@@ -17,6 +18,8 @@ function Dropdown(id) {
 
   //объект с данными текущего dropdown
   this.objDataDropdown = {};
+
+  this.defaultPlaceholder = this.inputDropdown.getAttribute('placeholder');
 
 
   //инициализация щелчка на dropdown
@@ -41,7 +44,11 @@ function Dropdown(id) {
       }
     }
     placeholder = placeholder.substring(2);
-    this.inputDropdown.setAttribute('placeholder', placeholder);
+    if (placeholder==='') {
+      this.inputDropdown.setAttribute('placeholder', this.defaultPlaceholder);
+    } else {
+      this.inputDropdown.setAttribute('placeholder', placeholder);
+    }
   }
 
   this.setInputDataForBackend = function() {

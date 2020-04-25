@@ -42,10 +42,10 @@ function RateButton(id) {
 
 
   this.resetRate = function(firstButton) {
-    console.log('reset');
+    // console.log('reset');
     this.rateButtonBox.setAttribute('data-rate-value', '');
     // this.setRateView(0);
-    console.log(firstButton);
+    // console.log(firstButton);
     firstButton.classList.remove('checked');
   }
 
