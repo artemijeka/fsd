@@ -9,8 +9,12 @@ var objDropdownCategory = new Dropdown('#dropdownCategory');
 function Dropdown(id) {
 
 
+  let self = this;
+
+
   //сам dropdown (input)
   this.inputDropdown = document.querySelector(id);
+
 
   //лист вариантов (ul)
   this.arInputsDropdownList = this.inputDropdown.nextSibling.nextSibling.nextSibling.children;
@@ -19,23 +23,25 @@ function Dropdown(id) {
   //объект с данными текущего dropdown
   this.objDataDropdown = {};
 
+
   this.defaultPlaceholder = this.inputDropdown.getAttribute('placeholder');
 
 
   //инициализация щелчка на dropdown
-  this.inputDropdown.onclick = function(event) {
-    event.target.classList.toggle('expanded');
+  this.inputDropdown.onclick = function() {
+    self.inputDropdown.classList.toggle('expanded');
   }
 
 
   //метод обновления данных dropdown
-  this.refreshDataDropdown = function(name, val) {
+  this.refreshDataDropdown = function (name, val) {
     this.objDataDropdown[name] = val;
     this.setInputPlaceholder();
     this.setInputDataForBackend();
   }
 
-  this.setInputPlaceholder = function() {
+
+  this.setInputPlaceholder = function () {
     let placeholder = '';
     for (let [key, val] of Object.entries(this.objDataDropdown)) {
       if (val > 0) {
@@ -44,52 +50,82 @@ function Dropdown(id) {
       }
     }
     placeholder = placeholder.substring(2);
-    if (placeholder==='') {
+    if (placeholder === '') {
       this.inputDropdown.setAttribute('placeholder', this.defaultPlaceholder);
     } else {
       this.inputDropdown.setAttribute('placeholder', placeholder);
     }
   }
 
-  this.setInputDataForBackend = function() {
-    let dataForBackend = JSON.stringify( this.objDataDropdown );
+
+  this.setInputDataForBackend = function () {
+    let dataForBackend = JSON.stringify(this.objDataDropdown);
     this.inputDropdown.setAttribute(['data-for-backend'], dataForBackend);
   }
-  
+
+
   //инициализация объекта с данными и кликов на + и на -
-  for (let item of this.arInputsDropdownList) {
-    let less = item.childNodes[3].childNodes[1];
-    let value = item.childNodes[3].childNodes[3];
-    let more = item.childNodes[3].childNodes[5];
-    let self = this;
+  for (let collectionOfItem of this.arInputsDropdownList) {
+    let less, more, curValue, acceptListBtn;
+    collectionOfItem.querySelectorAll('*').forEach((elem, ind, arr) => {
+      if (elem.getAttribute('data') === 'numberValueLess') {
+        less = elem;
+      }
+      if (elem.getAttribute('data') === 'numberValueMore') {
+        more = elem;
+      }
+      if (elem.getAttribute('data') === 'numberValue') {
+        curValue = elem;
+      }
+      if (elem.getAttribute('data') === 'acceptListBtn') {
+        acceptListBtn = elem;
+      }
+    });
+
 
     //инициализация объекта с данными dropdown
-    this.objDataDropdown[value.getAttribute('data-name')] = value.value;
+    // this.objDataDropdown[curValue.getAttribute('data-name')] = curValue.value;
 
-    if (Number(value.value) === 0) {
-      less.classList.add('disable');
-    }
 
-    less.onclick = function() {
-      let currentVal = Number(value.getAttribute('value'));
-      if (currentVal === 1) {
+    if (typeof (curValue) != 'undefined') {
+      if (Number(curValue.value) === 0) {
         less.classList.add('disable');
       }
-      if (currentVal > 0) {
-        value.setAttribute('value', --currentVal);
-      }
-      self.refreshDataDropdown(value.getAttribute('data-name'), currentVal);
-      console.log(self.objDataDropdown);
     }
 
-    more.onclick = function() {
-      let currentVal = Number(value.getAttribute('value'));
-      less.classList.remove('disable');
-      value.setAttribute('value', ++currentVal);
-      self.refreshDataDropdown(value.getAttribute('data-name'), currentVal);
-      console.log(self.objDataDropdown);
+    if (typeof (less) != 'undefined') {
+      less.onclick = function () {
+        let currentVal = Number(curValue.getAttribute('value'));
+        if (currentVal === 1) {
+          less.classList.add('disable');
+        }
+        if (currentVal > 0) {
+          curValue.setAttribute('value', --currentVal);
+        }
+        self.refreshDataDropdown(curValue.getAttribute('data-name'), currentVal);
+        // console.log(self.objDataDropdown);
+      }
+    }
+
+    if (typeof (more) != 'undefined') {
+      more.onclick = function () {
+        let currentVal = Number(curValue.getAttribute('value'));
+        less.classList.remove('disable');
+        curValue.setAttribute('value', ++currentVal);
+        self.refreshDataDropdown(curValue.getAttribute('data-name'), currentVal);
+        // console.log(self.objDataDropdown);
+      }
+    }
+
+    if (typeof(acceptListBtn) != 'undefined') {
+      console.log('test1');
+      acceptListBtn.onclick = function() {
+        console.log('test2');
+        self.inputDropdown.classList.remove('expanded');
+      }
     }
   }
+
 
 
 }
