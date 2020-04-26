@@ -7,7 +7,11 @@
     margin-top: $i*5px;
   }
 }
-
+@for $i from 1 through 5 {
+  .m#{$i} {
+    margin: $i+em;
+  }
+}
 
 .mr10 {
   margin-right: 10px;

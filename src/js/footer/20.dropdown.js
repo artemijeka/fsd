@@ -64,7 +64,7 @@ function Dropdown(id) {
   }
 
 
-  //инициализация объекта с данными и кликов на + и на -
+  //инициализация объекта с данными и кликов на '+', на '-', на 'применить'
   for (let collectionOfItem of this.arInputsDropdownList) {
     let less, more, curValue, acceptListBtn;
     collectionOfItem.querySelectorAll('*').forEach((elem, ind, arr) => {
