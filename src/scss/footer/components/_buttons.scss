@@ -1,0 +1,67 @@
+.button {
+  font-family: $font2;
+  position: relative;
+  max-width: 266px;
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+  &__wrap {
+    margin-top: 16px;
+    display: inline-flex;
+    width: 226px;
+    height: 170px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__text {
+    position: relative;
+    z-index: 3;
+  }
+  &__proto {
+    width: 99px;
+    height: 44px;
+    border-radius: 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &_full {
+      background: $gradient-accent;
+      color: white;
+    }
+    &_full-faded {
+      background: $gradient-accent;
+      color: white;
+      opacity: 0.5;
+    }
+    &_empty {
+      color: $color-accent;
+      background: $gradient-accent;
+      position: relative;
+      &:after {
+        content: '';
+        background-color: $white;
+        position: absolute;
+        width: 95px;
+        height: 40px;
+        border-radius: inherit;
+      }
+      &.faded {
+        opacity: 0.5;
+      } 
+    }
+    &_empty-faded {
+      color: $color-accent;
+    }
+    &_noborder {
+      color: $color-accent;
+    }
+    &_noborder-faded {
+      color: $color-grey-05;
+    }
+  }
+}
