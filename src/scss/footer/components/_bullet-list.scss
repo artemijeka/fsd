@@ -1,0 +1,31 @@
+.bullet-list {
+  font-family: $font2;
+  position: relative;
+  max-width: 266px;
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+  &__box {padding-left: 0;}
+  &__item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-grey-075;
+    list-style: none;
+    
+    &::before {
+      content: '';
+      background: $color-grey;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}
