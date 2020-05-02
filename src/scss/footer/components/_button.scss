@@ -12,14 +12,28 @@
   &__wrap {
     margin-top: 16px;
     display: inline-flex;
-    width: 226px;
-    height: 170px;
+    width: 320px;
+    height: 220px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   &__text {
     position: relative;
     z-index: 3;
+  }
+  &__arrow-ico {
+    height: inherit;
+    width: 44px;
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    &::before {
+      content: '\e800';
+      color: white;
+    }
   }
   &__proto {
     width: 99px;
@@ -28,10 +42,19 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: transparent;
     cursor: pointer;
-    &_full {
+    &_full,
+    &_full_big {
       background: $gradient-accent;
       color: white;
+      position: relative;
+    }
+    &_full_big {
+      width: 320px;
     }
     &_full-faded {
       background: $gradient-accent;
@@ -52,7 +75,7 @@
       }
       &.faded {
         opacity: 0.5;
-      } 
+      }
     }
     &_empty-faded {
       color: $color-accent;
