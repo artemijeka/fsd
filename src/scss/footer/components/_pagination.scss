@@ -1,0 +1,56 @@
+.pagination {
+  font-family: $font2;
+  position: relative;
+  max-width: 266px;
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+  &__box {
+    display: inline-flex;
+    width: 230px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+    color: $color-grey-05;
+    font-weight: normal;
+    &-active {
+      color: $white;
+      background: $gradient-accent;
+      font-weight: 700;
+    }
+    &-next {
+      background: $gradient-secondary;
+      &-ico {
+        font-size: 20px;
+        &::before {
+          content: '\e800';
+          color: white;
+        }
+      }
+    }
+  }
+  &__descr {
+    margin-top: 10px;
+    color: $color-grey-075;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
