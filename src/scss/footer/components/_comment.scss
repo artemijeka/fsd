@@ -1,0 +1,11 @@
+.comment {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-grey-075;
+  &__img {}
+  &__name {
+    font-weight: bold;
+  }
+  &__date {}
+}
