@@ -1,11 +1,43 @@
 .comment {
+  max-width: 711px;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
   color: $color-grey-075;
-  &__img {}
-  &__name {
-    font-weight: bold;
+  font-family: $font2;
+  &_center-mt50 {
+    margin: 50px auto;
   }
-  &__date {}
+  &__img {
+    float: left;
+    width: 46px;
+    height: 46px;
+  }
+  &__name {
+    margin-left: 10px;  
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__date {
+    margin-left: 10px;  
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__text {
+    margin: 9px 0 0 55px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 653px;
+  }
+  &__like-button {
+    margin-top: 9px;
+    margin-left: 3px;
+    float: left;
+  }
 }
