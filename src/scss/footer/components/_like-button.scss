@@ -1,5 +1,6 @@
 .like-button {  
   max-width: 266px;
+  font-family: $font2;
   &__title {
     display: inline-block;
     width: 100%;
@@ -12,7 +13,6 @@
     margin-bottom: 16px;
   }
   &__item {
-    font-family: $font2;
     position: relative;
     height: 22px;
     display: inline-flex;

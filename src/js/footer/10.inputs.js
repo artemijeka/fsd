@@ -1,7 +1,7 @@
 $(function() {
   
 
-  $('.jsSelect').niceSelect();
+
 
 
   $(".jsMaskedDate").inputmask('datetime', {
@@ -12,9 +12,7 @@ $(function() {
   });
 
 
-  $('.jsDateDropdown').datepicker({
-    dateFormat: "dd.mm.yy"
-  });
+  
   
 
 });

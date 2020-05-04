@@ -3,7 +3,7 @@
 
 var objDropdownRoom1 = new Dropdown('#dropdown1');
 var objDropdownRoom2 = new Dropdown('#dropdown2');
-var objDropdownCategory = new Dropdown('#dropdownCategory');
+var objDropdownCategory1 = new Dropdown('#dropdownCategory1');
 var objDropdownCategory2 = new Dropdown('#dropdownCategory2');
 
 
@@ -19,7 +19,7 @@ function Dropdown(id) {
 
   //лист вариантов (ul)
   this.arInputsDropdownList = this.inputDropdown.nextSibling.nextSibling.nextSibling.children;
-
+  // console.log(this.arInputsDropdownList);
 
   //объект с данными текущего dropdown
   this.objDataDropdown = {};
@@ -133,6 +133,7 @@ function Dropdown(id) {
             curItem.setAttribute('value', --curVal);
           }
           self.refreshDataDropdown(curItem.getAttribute('data-name'), curVal);
+          //TODO сделать скрытие кнопки очистить когда все чисто
           // console.log(self.objDataDropdown);
         }
       }
@@ -154,7 +155,7 @@ function Dropdown(id) {
         }
       }
 
-      if (typeof (cleanListBtn) != 'undefined') {
+      if (typeof (cleanListBtn) !== 'undefined') {
         cleanListBtn.onclick = function () {
           self.cleanDataDropdown();
         }
@@ -165,8 +166,5 @@ function Dropdown(id) {
   }
 
   this.init();
-
-
-
 
 }

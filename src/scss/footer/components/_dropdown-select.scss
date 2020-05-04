@@ -1,0 +1,40 @@
+.dropdown-select {
+  font-family: $font2;
+  border: 1px solid rgba($color-text, 0.25);
+  position: relative;
+  transition: 200ms;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 320px;
+  height: 44px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($color-text, 0.75);
+  position: relative;
+  cursor: pointer !important;
+  &::placeholder {
+    color: rgba($color-text, 0.75);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid rgba($color-text, 0.5);
+    &::placeholder {
+      color: rgba($color-text, 0.75);
+    }
+  }
+  ///nice-select ico customize///
+  .current {
+    line-height: 3em;
+  }
+  .list {
+    min-width: 320px;
+    box-shadow: 0 0 0 1px rgba($color-text, 0.5);
+  }
+  ///nice-select ico customize///
+}

@@ -2,4 +2,11 @@
   &__logo {
     margin: 30px;
   }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-start;
+  }
 }

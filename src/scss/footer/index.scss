@@ -9,7 +9,11 @@
 @import 'components/_palitra.scss';
 @import 'components/_text.scss';
 @import 'components/_inputs.scss';
-@import 'components/_dropdown.scss';
+@import 'components/_dropdown-select.scss';
+@import 'components/_dropdown-date-filter.scss';
+@import 'components/_dropdown-date.scss';
+@import 'components/_dropdown-75.scss';
+@import 'components/_dropdown-100.scss';
 @import 'components/_checkbox.scss';
 @import 'components/_plus.scss';
 @import 'components/_radio-buttons.scss';
@@ -21,3 +25,6 @@
 @import 'components/_pagination.scss';
 @import 'components/_bullet-list.scss';
 @import 'components/_comment.scss';
+
+
+@import 'cards/_find-number.scss';

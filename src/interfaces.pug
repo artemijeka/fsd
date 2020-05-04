@@ -1,15 +1,4 @@
-doctype html
-
-
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
-  meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  style.
-    @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap&subset=cyrillic');
-  link(rel='stylesheet' href='/css/header.min.css')
-  title FSD frontend education program
+include pug/_head.pug
 
 
 .container
@@ -21,49 +10,30 @@ head
     .interface__wrap
 
       .input__wrap.mt20
-        span.input__title.input__title_05 text field
+        span.input__title.input__title_50 text field
         span.input__descr default
         input.input.input_text-field(type='text' placeholder='Email')
 
 
       .input__wrap.mt20
-        span.input__title.input__title_05 text field
+        span.input__title.input__title_50 text field
         span.input__descr hover / focus / active
         input.input.input_text-field.input_text-field_active(type='text' placeholder='This is pretty awesome')
 
 
-      .input__wrap.mt20
-        span.input__title.input__title_05 dropdown
-        span.input__descr default
-        select.input.input_dropdown.jsSelect
-          option(value='0') Сколько гостей
-          option(value='1') one
-          option(value='2') two
-          option(value='3') three
+      include pug/components/_dropdown-select.pug
 
 
       .input__wrap.mt20
-        span.input__title.input__title_05 masked text field
+        span.input__title.input__title_50 masked text field
         span.input__descr default
         input.input.input_text-field.jsMaskedDate(type='text' placeholder='ДД.ММ.ГГГГ')
 
 
-      .input__wrap.input__wrap_05.mt20
-        span.input__title.input__title_1 date dropdown
-        input.input.input_dropdown.jsDateDropdown(placeholder='ДД.ММ.ГГГГ')
-        i.input__dropdown-ico
+      include pug/components/_dropdown-date.pug
 
 
-      .input__wrap.input__wrap_05.mt20
-        span.input__title.input__title_1 date dropdown
-        input.input.input_dropdown.jsDateDropdown(placeholder='19.08.2019')
-        i.input__dropdown-ico
-
-
-      .input__wrap.input__wrap_075.mt20
-        span.input__title.input__title_1 filter date dropdow
-        input.input.input_dropdown(placeholder='19 авг - 23 авг')
-        i.input__dropdown-ico
+      include pug/components/_dropdown-date-filter.pug
 
 
       .input__wrap.input__wrap_075.mt20
@@ -73,10 +43,10 @@ head
           i.input__subscription-ico.icon-arrow
           
       
-      include pug/components/_dropdown-room.pug
+      include pug/components/_dropdown-75.pug
 
 
-      include pug/components/_dropdown-room_opened.pug
+      include pug/components/_dropdown-75_opened.pug
 
       
       include pug/components/_checkbox-list.pug
@@ -106,7 +76,7 @@ head
       include pug/components/_rate-button.pug
 
       
-      include pug/components/_dropdown-category.pug
+      include pug/components/_dropdown-100.pug
 
 
       include pug/components/_checkbox-buttons-rich.pug
@@ -121,7 +91,7 @@ head
       include pug/components/_pagination.pug
 
 
-      include pug/components/_dropdown-category-select.pug
+      include pug/components/_dropdown-100-selected.pug
 
 
       include pug/components/_bullet-list.pug
