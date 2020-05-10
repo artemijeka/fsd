@@ -1,2 +1,41 @@
 .find-number
   .find-number__title Найдём номера под ваши пожелания
+
+  .input__wrap.input__wrap_05.mt20
+    span.input__title.input__title_100 прибытие
+    input.dropdown-date(data-dropdown-date placeholder='ДД.ММ.ГГГГ')
+    i.dropdown-date__ico
+
+  .input__wrap.input__wrap_05.mt20
+    span.input__title.input__title_100 выезд
+    input.dropdown-date(data-dropdown-date placeholder='ДД.ММ.ГГГГ')
+    i.dropdown-date__ico
+
+  .input__wrap.input__wrap.mt75
+    span.input__title.input__title_50 гости
+    //- span.input__descr expanded
+    input#dropdownCategory3.dropdown-100(data='openDropdownList' data-for-backend="" placeholder='Сколько гостей')
+    i.dropdown-100__ico
+    ul.dropdown-100__list
+      li.dropdown-100__item 
+        span.dropdown-100__item-title взрослые
+        .dropdown-100__item-btns
+          button.dropdown-100__item-btn.less(data='numberValueLess') &#x2212;
+          input.dropdown-100__item-number(disabled='disabled' data-name="взрослые" value='0' data='numberValue')
+          button.dropdown-100__item-btn.more(data='numberValueMore') &#x2b;
+      li.dropdown-100__item 
+        span.dropdown-100__item-title дети
+        .dropdown-100__item-btns
+          button.dropdown-100__item-btn.less(data='numberValueLess') &#x2212;
+          input.dropdown-100__item-number(disabled='disabled' data-name="дети" value='0' data='numberValue')
+          button.dropdown-100__item-btn.more(data='numberValueMore') &#x2b;
+      li.dropdown-100__item 
+        span.dropdown-100__item-title младенцы
+        .dropdown-100__item-btns
+          button.dropdown-100__item-btn.less(data='numberValueLess') &#x2212;
+          input.dropdown-100__item-number(disabled='disabled' data-name="младенцы" value='0' data='numberValue')
+          button.dropdown-100__item-btn.more(data='numberValueMore') &#x2b;
+      li.dropdown-100__item.dropdown-100__item-accept 
+        button.dropdown-100__item-btn-clean(data='cleanListBtn') очистить
+        .dropdown-100__item-btns
+          button.dropdown-100__item-btn-accept(data='acceptListBtn') применить

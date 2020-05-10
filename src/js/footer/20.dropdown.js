@@ -1,10 +1,18 @@
 'use strict';
 
 
-var objDropdownRoom1 = new Dropdown('#dropdown1');
-var objDropdownRoom2 = new Dropdown('#dropdown2');
-var objDropdownCategory1 = new Dropdown('#dropdownCategory1');
-var objDropdownCategory2 = new Dropdown('#dropdownCategory2');
+
+var collectionDropdownLists = document.querySelectorAll('[data="openDropdownList"]');
+var arDropdownLists = [];
+var i = 0;
+
+
+collectionDropdownLists.forEach( (elm, ind, nodeList) => {
+  let curId = elm.getAttribute('id');
+  arDropdownLists[i++] = new Dropdown('#' + curId);
+});
+console.log(arDropdownLists);
+
 
 
 function Dropdown(id) {
@@ -15,6 +23,7 @@ function Dropdown(id) {
 
   //сам dropdown (input)
   this.inputDropdown = document.querySelector(id);
+  // console.log(this.inputDropdown);
 
 
   //лист вариантов (ul)
@@ -66,6 +75,7 @@ function Dropdown(id) {
     placeholder = placeholder.substring(2);
     if (placeholder === '') {
       this.inputDropdown.setAttribute('placeholder', this.defaultPlaceholder);
+      this.cleanListBtn.classList.remove('active');
     } else {
       this.inputDropdown.setAttribute('placeholder', placeholder);
     }
@@ -132,9 +142,8 @@ function Dropdown(id) {
           if (curVal > 0) {
             curItem.setAttribute('value', --curVal);
           }
-          self.refreshDataDropdown(curItem.getAttribute('data-name'), curVal);
           //TODO сделать скрытие кнопки очистить когда все чисто
-          // console.log(self.objDataDropdown);
+          self.refreshDataDropdown(curItem.getAttribute('data-name'), curVal);
         }
       }
 

@@ -1,23 +1,34 @@
-doctype html
-include pug/_head.pug
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    style.
+      @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=cyrillic');
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap&subset=cyrillic');
+    link(rel='stylesheet' href='/css/header.min.css')
+    title FSD frontend education program
+
+  body
+
+    .container
+
+      article.cards
+
+        i.icon-logo.cards__logo
+
+        .cards__wrap
+
+          include pug/cards/_find-number.pug
 
 
-.container
 
-  article.cards
-
-    i.icon-logo.cards__logo
-
-    .cards__wrap
-
-      include pug/cards/_find-number.pug
+        include pug/ui-kit/_bottom-navigate.pug
 
 
-    include pug/ui-kit/_bottom-navigate.pug
+    link(rel='stylesheet' href='/css/vendor/footer.min.css')
+    link(rel='stylesheet' href='/css/footer.min.css')
 
-
-link(rel='stylesheet' href='/css/vendor/footer.min.css')
-link(rel='stylesheet' href='/css/footer.min.css')
-
-script(src='/js/vendor/footer.min.js')
-script(src='/js/footer.min.js')
+    script(src='/js/vendor/footer.min.js' defer)
+    script(src='/js/footer.min.js' defer)
