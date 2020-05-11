@@ -1,0 +1,27 @@
+.registration-account {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  min-height: 646px;
+  width: 100%;
+  height: auto;
+  &__title {
+    font-family: $font2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+  }
+  &__login-text {
+    font-family: $font2;
+    width: 14em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    margin-top: auto;
+    display: inline-flex;
+  }
+}

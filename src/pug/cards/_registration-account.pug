@@ -1,0 +1,40 @@
+form.cards.registration-account.mt40
+  h3.registration-account__title Регистрация аккаунта
+
+  input.text-field.mt20(type='text' placeholder='Имя')
+
+  input.text-field.mt10(type='text' placeholder='Фамилия')
+
+  .radio-buttons.mt10
+    label.radio-buttons__item
+      input.radio-buttons__item-radio(type='radio' name='gender')
+      span.radio-buttons__item-checkmark
+      span.radio-buttons__item-name Мужчина
+
+    label.radio-buttons__item
+      input.radio-buttons__item-radio(type='radio' name='gender')
+      span.radio-buttons__item-checkmark
+      span.radio-buttons__item-name Женщина
+
+  .input__wrap.mt20
+    span.input__title.input__title_50 Дата рождения
+    span.input__descr 
+    input.input.text-field(data="text-field-date" type='text' placeholder='ДД.ММ.ГГГГ')
+
+  span.input__title.input__title_100.mt20 данные для входа в сервис
+  input.text-field(type='text' placeholder='Email')
+  input.text-field.mt10(type='password' placeholder='Пароль')
+
+  .toggle.mt10
+    label.toggle__item
+      input.toggle__item-radio(type='checkbox')
+      i.toggle__item-checkmark
+      span.toggle__item-name Получать спецпредложения
+    
+  button.button__proto.button__proto_full_big.mt20 перейти к оплате
+    i.button__arrow-ico
+
+  .registration-account__login-text Уже есть аккаунт на Toxin
+
+  button.button__proto.button__proto_empty 
+    .button__text Войти

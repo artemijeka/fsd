@@ -8,7 +8,8 @@
   &__wrap {
     max-height: 1210px;
     display: flex;
-    margin-left: 140px;
+    max-width: 1200px;
+    margin: auto;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;

@@ -1,0 +1,30 @@
+.text-field {
+  font-family: $font2;
+  border: 1px solid rgba($color-text, 0.25);
+  position: relative;
+  transition: 200ms;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 320px;
+  height: 44px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  &::placeholder {
+    color: rgba($color-text, 0.25);
+  }
+  &_active,
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgba($color-text, 0.75);
+    border: 1px solid rgba($color-text, 0.5);
+    &::placeholder {
+      color: rgba($color-text, 0.75);
+    }
+  }
+}
