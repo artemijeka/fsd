@@ -1,3 +1,4 @@
+@import '_navigate.scss';
 @import 'pages/_palitra-text.scss';
 @import 'pages/_interfaces.scss';
 @import 'pages/_cards.scss';
@@ -23,25 +24,3 @@
   margin-right: 10px;
 }
 
-
-.navigate  {
-  ul {
-    margin: 2em auto;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    width: 70px;
-    justify-content: space-between;
-    li {
-      a {
-        text-decoration: none;
-        color: black;
-        font-weight: 500;
-        &:hover {
-          font-weight: 900;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}

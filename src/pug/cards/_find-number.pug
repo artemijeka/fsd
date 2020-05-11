@@ -1,4 +1,5 @@
 .find-number
+
   .find-number__title Найдём номера под ваши пожелания
 
   .input__wrap.input__wrap_05.mt20
@@ -11,7 +12,7 @@
     input.dropdown-date(data-dropdown-date placeholder='ДД.ММ.ГГГГ')
     i.dropdown-date__ico
 
-  .input__wrap.input__wrap.mt75
+  .input__wrap.input__wrap.mt20
     span.input__title.input__title_50 гости
     //- span.input__descr expanded
     input#dropdownCategory3.dropdown-100(data='openDropdownList' data-for-backend="" placeholder='Сколько гостей')
@@ -39,3 +40,6 @@
         button.dropdown-100__item-btn-clean(data='cleanListBtn') очистить
         .dropdown-100__item-btns
           button.dropdown-100__item-btn-accept(data='acceptListBtn') применить
+
+  button.button__proto.button__proto_full_big.mt30 подобрать номер
+    i.button__arrow-ico

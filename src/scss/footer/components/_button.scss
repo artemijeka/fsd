@@ -1,7 +1,5 @@
 .button {
-  font-family: $font2;
   position: relative;
-  max-width: 266px;
   &__title {
     font-style: normal;
     font-weight: bold;
@@ -13,6 +11,7 @@
     margin-top: 16px;
     display: inline-flex;
     width: 320px;
+    max-width: 320px;
     height: 220px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -36,6 +35,7 @@
     }
   }
   &__proto {
+    font-family: $font2;
     width: 99px;
     height: 44px;
     border-radius: 22px;
@@ -44,8 +44,14 @@
     align-items: center;
     border: none;
     text-transform: uppercase;
-    font-weight: 700;
     background-color: transparent;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
     cursor: pointer;
     &_full,
     &_full_big {

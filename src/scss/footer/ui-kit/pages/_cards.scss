@@ -3,6 +3,9 @@
     margin: 30px;
   }
   &__wrap {
+    margin: auto;
+    max-width: 1160px;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
