@@ -37,6 +37,7 @@
   }
   &__proto {
     font-family: $font2;
+    min-width: 99px;
     width: 99px;
     height: 44px;
     border-radius: 22px;
@@ -61,7 +62,8 @@
       position: relative;
     }
     &_full_big {
-      width: 320px;
+      max-width: 320px;
+      width: 100%;
     }
     &_full-faded {
       background: $gradient-accent;

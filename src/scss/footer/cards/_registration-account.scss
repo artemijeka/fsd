@@ -21,7 +21,12 @@
     font-size: 14px;
     line-height: 18px;
     align-items: center;
-    margin-top: auto;
     display: inline-flex;
+  }
+  &__enter {
+    margin-top: 30px;
+    justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
   }
 }
