@@ -6,82 +6,70 @@
 }
 
 .mark {
-
   &-h1 {
-    font-family: $font1;
+    font-family: $ff1;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    color: $color-text;
+    color: $black;
   }
-
   &-h2 {
-    font-family: $font1;
+    font-family: $ff1;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
-    color: $color-text;
+    color: $black;
   }
-
   &-h3 {
-    font-family: $font2;
+    font-family: $ff2;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $color-text;
+    color: $black;
   }
-
   &-body {
-    font-family: $font2;
+    font-family: $ff2;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
-    color: rgba($color-text, 0.75);
+    color: rgba($black, 0.75);
   }
-
   &-item {
     display: inline-flex;
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
-
     &__name {
       display: inline-block;
-      font-family: $font2;
+      font-family: $ff2;
       font-style: normal;
       font-weight: normal;
-      color: rgba($color-text, 0.25);
-
+      color: rgba($black, 0.25);
       &_h1 {
         font-size: 24px;
         line-height: 29px;
       }
-
       &_h2 {
         font-size: 19px;
         line-height: 23px;
       }
-
       &_h3 {
         font-size: 12px;
         line-height: 15px;
       }
-
       &_body {
         font-size: 14px;
         line-height: 24px;
       }
     }
-
     &__example {
       display: inline-block;
       width: 80%;
-
     }
   }
 }

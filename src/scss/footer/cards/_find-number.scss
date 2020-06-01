@@ -1,23 +1,18 @@
 .find-number {
+  margin-right: 40px;
   max-width: 380px;
   min-height: 374px;
   height: auto;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
   &__title {
-    font-family: $font2;
+    font-family: $ff2;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
-    color: $color-text;
-  }
-  &__input_05 {
-    @media (max-width: 449.98px) {
-      max-width: 100%;
-      width: 100%;
-    }
+    color: $black;
   }
 }

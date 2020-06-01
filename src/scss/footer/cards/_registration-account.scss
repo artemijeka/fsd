@@ -1,12 +1,12 @@
 .registration-account {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   max-width: 380px;
   min-height: 646px;
   width: 100%;
   height: auto;
   &__title {
-    font-family: $font2;
+    font-family: $ff2;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -14,7 +14,7 @@
     color: #1F2041;
   }
   &__login-text {
-    font-family: $font2;
+    font-family: $ff2;
     width: 14em;
     font-style: normal;
     font-weight: 400;
@@ -25,6 +25,8 @@
   }
   &__enter {
     margin-top: 30px;
+    max-width: 100%;
+    width: 100%;
     justify-content: space-between;
     display: inline-flex;
     align-items: center;

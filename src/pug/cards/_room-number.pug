@@ -1,0 +1,25 @@
+.room-number.cards
+  .room-number__top 
+    span.room-number__title № 888
+    span.room-number__subtitle люкс
+    span.room-number__price-title 9 990₽ в сутки
+  
+  .input__wrap.input__wrap_05.cards__input_05.mt20
+    span.input__title.input__title_100 прибытие
+    input.dropdown-date(data-dropdown-date placeholder='ДД.ММ.ГГГГ')
+    i.dropdown-date__ico
+
+  .input__wrap.input__wrap_05.cards__input_05.mt20
+    span.input__title.input__title_100 выезд
+    input.dropdown-date(data-dropdown-date placeholder='ДД.ММ.ГГГГ')
+    i.dropdown-date__ico
+
+  .input__wrap.mt20
+    span.input__title.input__title_50 гости
+    //- span.input__descr default
+    select.dropdown-select(date-dropwdown-select)
+      option(value='0') Сколько гостей
+      option(value='1') 1 гость
+      option(value='2') 2 гостя
+      option(value='3') 3 гостя
+      option(value='4') 4 гостя

@@ -1,6 +1,6 @@
-.like-button {  
+.like-button {
   max-width: 266px;
-  font-family: $font2;
+  font-family: $ff2;
   &__title {
     display: inline-block;
     width: 100%;
@@ -9,7 +9,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $color-text;
+    color: $black;
     margin-bottom: 16px;
   }
   &__item {
@@ -56,7 +56,7 @@
       position: absolute;
       cursor: pointer;
       &:checked {
-        ~ i {
+        ~i {
           background-color: white;
           background-clip: padding-box;
           border: 1px solid transparent;
@@ -68,7 +68,7 @@
             background: $gradient-accent-v;
           }
         }
-        ~ span {
+        ~span {
           color: $color-accent;
         }
       }

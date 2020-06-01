@@ -1,9 +1,8 @@
 .palitra {
-  font-family: $font1;
+  font-family: $ff1;
   width: 50%;
   display: inline-flex;
   flex-direction: column;
-
   &-item {
     margin-top: 20px;
     display: inline-flex;
@@ -14,47 +13,37 @@
     justify-content: space-between;
     width: 50%;
     height: 70px;
-
     .color {
       &_dark-shade {
         &_100 {
-          background: $color-text;
+          background: $black;
         }
-
         &_75 {
-          background: rgba($color-text, 0.75);
+          background: rgba($black, 0.75);
         }
-
         &_50 {
-          background: rgba($color-text, 0.5);
+          background: rgba($black, 0.5);
         }
-
         &_25 {
-          background: rgba($color-text, 0.25);
+          background: rgba($black, 0.25);
         }
-
         &_5 {
-          background: rgba($color-text, 0.05);
+          background: rgba($black, 0.05);
         }
       }
-
       &_purple {
         background-color: #BC9CFF;
       }
-
       &_green {
         background-color: #6FCF97;
       }
     }
-
-
     &__box {
       display: inline-block;
       width: 70px;
       height: 70px;
       border-radius: 6px;
     }
-
     &__text,
     &__subtext {
       font-style: normal;
@@ -65,11 +54,9 @@
       display: inline-flex;
       align-items: center;
     }
-
     &__text {
       font-weight: 700;
     }
-
     &__subtext {
       font-weight: 400;
     }

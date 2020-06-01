@@ -1,5 +1,5 @@
 .rate-button {
-  font-family: $font2;
+  font-family: $ff2;
   max-width: 266px;
   &__title {
     display: inline-block;
@@ -14,7 +14,7 @@
   }
   &__box {
     display: inline-flex;
-    flex-direction: row-reverse;//реализация выделения звездочек с низшим рейтингом
+    flex-direction: row-reverse; //реализация выделения звездочек с низшим рейтингом
   }
   &__item {
     border: none;
@@ -30,7 +30,7 @@
       -webkit-text-fill-color: transparent;
     }
     &.checked,
-    &:hover ~ button,//реализация выделения звездочек с низшим рейтингом
+    &:hover~button, //реализация выделения звездочек с низшим рейтингом
     &:hover {
       i:before {
         content: '\e808';

@@ -1,5 +1,5 @@
 .range-slider {
-  font-family: $font2;
+  font-family: $ff2;
   position: relative;
   max-width: 266px;
   &__title {
@@ -12,7 +12,7 @@
     font-size: 12px;
     line-height: 1em;
     text-transform: uppercase;
-    color: $color-text;
+    color: $black;
   }
   &__descr {
     display: inline-block;
@@ -25,7 +25,7 @@
     line-height: 1em;
     text-align: right;
     text-transform: uppercase;
-    color: rgba($color-text, 0.5);
+    color: rgba($black, 0.5);
   }
   &__input {
     display: none;
@@ -54,7 +54,7 @@
       outline: none;
     }
     // &-slanc,
-    .ui-slider-range.ui-widget-header {      
+    .ui-slider-range.ui-widget-header {
       display: inline-block;
       height: 6px;
       background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);

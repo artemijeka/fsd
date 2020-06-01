@@ -1,6 +1,6 @@
 .dropdown-date-filter {
-  font-family: $font2;
-  border: 1px solid rgba($color-text, 0.25);
+  font-family: $ff2;
+  border: 1px solid rgba($black, 0.25);
   position: relative;
   transition: 200ms;
   padding-left: 15px;
@@ -14,18 +14,18 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: rgba($color-text, 0.75);
+  color: rgba($black, 0.75);
   position: relative;
   cursor: pointer !important;
   &::placeholder {
-    color: rgba($color-text, 0.75);
+    color: rgba($black, 0.75);
   }
   &:hover,
   &:focus,
   &:active {
-    border: 1px solid rgba($color-text, 0.5);
+    border: 1px solid rgba($black, 0.5);
     &::placeholder {
-      color: rgba($color-text, 0.75);
+      color: rgba($black, 0.75);
     }
   }
   &__ico {

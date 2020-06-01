@@ -1,5 +1,5 @@
 .toggle {
-  font-family: $font2;
+  font-family: $ff2;
   max-width: 266px;
   &__title {
     display: inline-block;
@@ -9,7 +9,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $color-text;
+    color: $black;
     margin-bottom: 16px;
   }
   &__item {
@@ -37,7 +37,6 @@
         border-radius: 50%;
         background: rgba(31, 32, 65, 0.25);
         transition-duration: .3s;
-        
       }
     }
     &-radio {
@@ -47,7 +46,7 @@
       position: absolute;
       cursor: pointer;
       &:checked {
-        ~ i {
+        ~i {
           border: 1px solid #bc9cff;
           justify-content: flex-end;
           transition-duration: justify-content .3s;
@@ -57,7 +56,6 @@
         }
       }
     }
-    
     &-name {
       font-style: normal;
       font-weight: 400;

@@ -7,6 +7,7 @@ var arDropdownLists = [];
 var i = 0;
 
 
+
 collectionDropdownLists.forEach( (elm, ind, nodeList) => {
   let curId = elm.getAttribute('id');
   arDropdownLists[i++] = new Dropdown('#' + curId);
@@ -58,7 +59,7 @@ function Dropdown(id) {
   this.cleanDataDropdown = function() {
     this.init(true);//clean = true
     for (let key in this.objDataDropdown) {
-      this.refreshDataDropdown( key, 0 );
+      this.refreshDataDropdown(key, 0);
     }
     this.cleanListBtn.classList.remove('active');
   }
