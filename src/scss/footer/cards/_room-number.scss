@@ -27,9 +27,13 @@
   }
   &__price-title {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 30px;
     color: $color-grey-05;
+    background-color: transparent;
+    border: none;
+    width: 50%;
+    text-align: right;
   }
 }
