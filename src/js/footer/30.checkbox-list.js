@@ -1,8 +1,20 @@
 'use strict';
 
 
-let checkboxList1 = new CheckboxList('#checkboxList1');
-let checkboxList2 = new CheckboxList('#checkboxList2');
+iniTcheckboxList();
+
+
+function iniTcheckboxList() {
+  let collectionCheckboxLists = document.querySelectorAll('[data="checkboxList"]');
+  let arCheckboxLists = [];
+  let i = 0;
+  
+  collectionCheckboxLists.forEach( (elm, ind, nodeList) => {
+    let curId = elm.getAttribute('id');
+    console.log(curId);
+    arCheckboxLists[i++] = new CheckboxList( '#' + curId );
+  });
+}
 
 
 function CheckboxList(id) {

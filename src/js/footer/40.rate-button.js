@@ -1,10 +1,19 @@
 'use strict';
 
 
+iniTrateButton();
 
-let rateButton1 = new RateButton('#rateButton1');
-let rateButton2 = new RateButton('#rateButton2');
 
+function iniTrateButton() {
+  let collectionDropdownLists = document.querySelectorAll('[data="rateButton"]');
+  let arDropdownLists = [];
+  let i = 0;
+
+  collectionDropdownLists.forEach((elm, ind, nodeList) => {
+    let curId = elm.getAttribute('id');
+    arDropdownLists[i++] = new RateButton('#' + curId);
+  });
+}
 
 
 function RateButton(id) {

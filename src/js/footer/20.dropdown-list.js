@@ -1,19 +1,19 @@
 'use strict';
 
 
-
-var collectionDropdownLists = document.querySelectorAll('[data="openDropdownList"]');
-var arDropdownLists = [];
-var i = 0;
+iniTdropdownList();
 
 
+function iniTdropdownList() {
+  let collectionDropdownLists = document.querySelectorAll('[data="dropdownList"]');
+  let arDropdownLists = [];
+  let i = 0;
 
-collectionDropdownLists.forEach( (elm, ind, nodeList) => {
-  let curId = elm.getAttribute('id');
-  arDropdownLists[i++] = new Dropdown('#' + curId);
-});
-console.log(arDropdownLists);
-
+  collectionDropdownLists.forEach((elm, ind, nodeList) => {
+    let curId = elm.getAttribute('id');
+    arDropdownLists[i++] = new Dropdown('#' + curId);
+  });
+}
 
 
 function Dropdown(id) {
@@ -31,6 +31,7 @@ function Dropdown(id) {
   this.arInputsDropdownList = this.inputDropdown.nextSibling.nextSibling.nextSibling.children;
   // console.log(this.arInputsDropdownList);
 
+
   //объект с данными текущего dropdown
   this.objDataDropdown = {};
 
@@ -43,13 +44,13 @@ function Dropdown(id) {
 
 
   //инициализация щелчка на dropdown
-  this.inputDropdown.onclick = function () {
+  this.inputDropdown.onclick = function() {
     self.inputDropdown.classList.toggle('expanded');
   }
 
 
   //метод обновления данных dropdown
-  this.refreshDataDropdown = function (name, val) {
+  this.refreshDataDropdown = function(name, val) {
     this.objDataDropdown[name] = val;
     this.setInputPlaceholder();
     this.setInputDataForBackend();
@@ -57,7 +58,7 @@ function Dropdown(id) {
 
 
   this.cleanDataDropdown = function() {
-    this.init(true);//clean = true
+    this.init(true); //clean = true
     for (let key in this.objDataDropdown) {
       this.refreshDataDropdown(key, 0);
     }
@@ -65,7 +66,7 @@ function Dropdown(id) {
   }
 
 
-  this.setInputPlaceholder = function () {
+  this.setInputPlaceholder = function() {
     let placeholder = '';
     for (let [key, val] of Object.entries(this.objDataDropdown)) {
       if (val > 0) {
@@ -83,18 +84,21 @@ function Dropdown(id) {
   }
 
 
-  this.setInputDataForBackend = function () {
-    let dataForBackend = JSON.stringify( this.objDataDropdown );
-    this.inputDropdown.setAttribute( ['data-for-backend'], dataForBackend );
+  this.setInputDataForBackend = function() {
+    let dataForBackend = JSON.stringify(this.objDataDropdown);
+    this.inputDropdown.setAttribute(['data-for-backend'], dataForBackend);
   }
 
 
-  this.init = function (clean = false) {
+  this.init = function(clean = false) {
+
 
     //инициализация объекта с данными и кликов на '+', на '-', на 'применить'
     for (let collectionOfItem of this.arInputsDropdownList) {
 
+
       let less, more, curItem, curName, curVal, acceptListBtn, cleanListBtn;
+
 
       collectionOfItem.querySelectorAll('*').forEach((elem, ind, arr) => {
 
@@ -104,9 +108,11 @@ function Dropdown(id) {
             less.classList.add('disable');
           }
         }
+
         if (elem.getAttribute('data') === 'numberValueMore') {
           more = elem;
         }
+
         if (elem.getAttribute('data') === 'numberValue') {
           curItem = elem;
           // console.log(curItem);
@@ -119,23 +125,25 @@ function Dropdown(id) {
             curItem.setAttribute('value', 0)
           }
         }
+
         if (elem.getAttribute('data') === 'acceptListBtn') {
           acceptListBtn = elem;
         }
+
         if (elem.getAttribute('data') === 'cleanListBtn') {
           this.cleanListBtn = cleanListBtn = elem;
         }
 
       });
 
-      if (typeof (curItem) !== 'undefined') {
+      if (typeof(curItem) !== 'undefined') {
         if (Number(curItem.value) === 0) {
           less.classList.add('disable');
         }
       }
 
-      if (typeof (less) !== 'undefined') {
-        less.onclick = function () {
+      if (typeof(less) !== 'undefined') {
+        less.onclick = function() {
           let curVal = Number(curItem.getAttribute('value'));
           if (curVal === 1) {
             less.classList.add('disable');
@@ -148,25 +156,24 @@ function Dropdown(id) {
         }
       }
 
-      if (typeof (more) !== 'undefined') {
-        more.onclick = function () {
-          let curVal = Number(curItem.getAttribute('value'));
-          less.classList.remove('disable');
-          curItem.setAttribute('value', ++curVal);
+      if (typeof(more) !== 'undefined') {
+        more.onclick = function() {
+          let curVal = Number( curItem.getAttribute('value') );
+          less.classList.remove( 'disable' );
+          curItem.setAttribute( 'value', ++curVal );
           self.refreshDataDropdown(curItem.getAttribute('data-name'), curVal);
-          // console.log(self.objDataDropdown);
-          self.cleanListBtn.classList.add('active');//показываем кнопку очистить по прибавлению
+          self.cleanListBtn.classList.add('active'); //показываем кнопку очистить по прибавлению
         }
       }
 
-      if (typeof (acceptListBtn) !== 'undefined') {
-        acceptListBtn.onclick = function () {
+      if (typeof(acceptListBtn) !== 'undefined') {
+        acceptListBtn.onclick = function() {
           self.inputDropdown.classList.remove('expanded');
         }
       }
 
-      if (typeof (cleanListBtn) !== 'undefined') {
-        cleanListBtn.onclick = function () {
+      if (typeof(cleanListBtn) !== 'undefined') {
+        cleanListBtn.onclick = function() {
           self.cleanDataDropdown();
         }
       }

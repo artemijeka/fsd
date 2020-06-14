@@ -1,21 +1,25 @@
-form.find-number.cards
+.find-number.cards
+
 
   h3.find-number__title Найдём номера под ваши пожелания
+
 
   .input__wrap.input__wrap_05.cards__input_05.mt20
     span.input__title.input__title_100 прибытие
     input.dropdown-date(data-dropdown-date placeholder='ДД.ММ.ГГГГ')
     i.dropdown-date__ico
 
+
   .input__wrap.input__wrap_05.cards__input_05.mt20
     span.input__title.input__title_100 выезд
     input.dropdown-date(data-dropdown-date placeholder='ДД.ММ.ГГГГ')
     i.dropdown-date__ico
 
+
   .input__wrap.input__wrap.mt20
     span.input__title.input__title_50 гости
     //- span.input__descr expanded
-    input#dropdownCategory4.dropdown-100(data='openDropdownList' data-for-backend="" placeholder='Сколько гостей')
+    input#dropdownCategory4.dropdown-100(data='dropdownList' data-for-backend="" placeholder='Сколько гостей')
     i.dropdown-100__ico
     ul.dropdown-100__list
       li.dropdown-100__item 
@@ -40,6 +44,7 @@ form.find-number.cards
         button.dropdown-100__item-btn-clean(data='cleanListBtn') очистить
         .dropdown-100__item-btns
           button.dropdown-100__item-btn-accept(data='acceptListBtn') применить
+
 
   button.button__proto.button__proto_full_big.mt30 подобрать номер
     i.button__arrow-ico
