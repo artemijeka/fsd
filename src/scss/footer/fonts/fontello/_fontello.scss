@@ -25,7 +25,8 @@
  .like-button__item-checkmark,
  .rate-button__item-ico,
  .button__arrow-ico,
- .pagination__item-next-ico {
+ .pagination__item-next-ico,
+ .room-number__calculation-info-ico {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -68,3 +69,4 @@
 .icon-logo:before { content: '\e805'; } /* '' */
 .icon-star-o:before { content: '\e807'; } /* '' */
 .icon-star-v:before { content: '\e808'; } /* '' */
+.icon-info:before { content: '\e809'; } /* '' */

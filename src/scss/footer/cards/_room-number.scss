@@ -36,4 +36,34 @@
     width: 50%;
     text-align: right;
   }
+  &__calculation-list {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    &-box {
+      width: inherit;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+  &__calculation-info-ico {
+    margin-right: auto;
+    margin-left: 4px;
+    &:before {
+      content: '\e809';
+      border: 1px solid $color-grey;
+      border-radius: 50%;
+      color: $color-grey;
+    }
+  }
+  &__calculation-item {
+    &:first-child {
+      width: 68%;
+      display: inline-block;
+    }
+  }
 }
