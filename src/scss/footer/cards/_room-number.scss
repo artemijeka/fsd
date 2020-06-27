@@ -1,7 +1,7 @@
 .room-number {
-  font-family: $ff2;
-  width: 100%;
-  max-width: 380px;
+  // font-family: $ff2;
+  // width: 100%;
+  // max-width: 380px;
   &__top {
     display: inline-flex;
     justify-content: space-between;
@@ -64,6 +64,29 @@
     &:first-child {
       width: 68%;
       display: inline-block;
+    }
+  }
+  &__total {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    &-text {
+      // display: inline-block;
+
+    }
+    &-ellipsis {
+      width: 9.3em;
+    font-weight: 100;
+    overflow: hidden;
+    }
+    &-number {
+      // display: inline-block;
+      
     }
   }
 }
