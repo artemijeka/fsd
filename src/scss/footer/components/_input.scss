@@ -67,6 +67,7 @@
     &:before {
       color: $color-accent;
       font-size: 22px;
+      content: '\e800';
     }
   }
   &_subscription {
