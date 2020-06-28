@@ -1,6 +1,38 @@
 .calendar {
     max-width: 320px;
     padding: 20px;
+    &__btns {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        color: rgba(31,32,65,.5);
+        background-color: transparent;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        cursor: pointer;
+        &-clean {
+            font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: rgba(31,32,65,.5);
+        cursor: pointer;
+            padding: 10px 0;
+        }
+        &-accept {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: $color-accent;
+                padding: 10px 0;
+        }
+    }
     .ui-datepicker {
         border: none;
         padding: 0;
@@ -15,6 +47,7 @@
         }
     }
     .ui-datepicker-calendar {
+        margin-top: 20px;
         thead {
             height: 40px;
         }
@@ -77,14 +110,36 @@
                 border: none;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 12px;
                 line-height: 15px;
                 // display: inline-block;
                 background-color: transparent;
                 cursor: pointer;
                 font-weight: normal;
                 background: $gradient-secondary;
+                font-size: 12px;
+                font-weight: bold;
             }
+        }
+        .ui-state-active,
+        .ui-state-default.ui-state-active {
+            width: 40px;
+            height: 40px;
+            border-radius: 22px;
+            border: none;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            display: inline-block;
+            background-color: transparent;
+            cursor: pointer;
+            color: white;
+            display: inline-flex;
+            font-weight: normal;
+            color: $white;
+            background: $gradient-accent;
+            font-weight: 700;
+            font-size: 12px;
+            font-weight: bold;
         }
     }
     .ui-widget-header {

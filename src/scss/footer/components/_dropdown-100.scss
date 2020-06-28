@@ -128,18 +128,6 @@
       box-sizing: border-box;
       border-radius: 50%;
       cursor: pointer;
-      &-accept {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        color: $color-accent;
-        padding: 10px 5px;
-      }
       &-clean {
         position: relative;
         z-index: -9;
@@ -157,6 +145,19 @@
           visibility: visible;
         }
       }
+      &-accept {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: $color-accent;
+        padding: 10px 5px;
+      }
+      
       &.less {
         &.disable {
           border: 1px solid rgba($black, 0.25);

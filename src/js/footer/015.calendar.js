@@ -29,5 +29,8 @@ $(function(){
 		});
 		// $("#datepickerOpen").datepicker("setDate", $('#datepickerValue').val());
 
+		$('.ui-state-default').on('click', function(){
+				console.log( $(this).text() );
+		});
 
 });
